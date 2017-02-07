@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Segment Control</title>
+    <link rel="stylesheet" href="css/photon.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="dist/segment.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/tomorrow-night-eighties.css">
+    <script src="js/highlight.min.js"></script>
+    <script type="text/javascript" src="dist/segment.js"></script>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+    </script>
+    <style media="screen">
+    .code-main {
+      width: 600px;
+      margin-left: calc(50% - 300px);
+      margin-top: 5px;
+    }
+    code, pre {
+      border-radius: 4px;
+      user-select: all;+
+      -moz-user-select: all;
+      -webkit-user-select: all;
+      margin: 0px;
+    }
+    pre {
+      padding: 0px;
+    }
+    code::selection, pre::selection {
+      background-color: #333;
+    }
+    h4 {
+      margin-top: 0px;
+      padding: 0px;
+      text-align: left;
+    }
+    .segment-example-target {
+      margin: 10px;
+      width: auto;
+      display: block;
+      padding: 10px;
+      border: 1px solid #666;
+      background-color: #343434;
+      color: #fff;
+      width: 100px;
+      text-align: center;
+    }
+    table {
+      color: #222;
+    }
+    tr:active {
+      background-color: transparent;
+      color: #222;
+    }
+    table .string {
+      color: rgb(55, 179, 57);
+    }
+    table .boolean {
+      color: rgb(250, 160, 41);
+    }
+    table .number {
+      color: rgb(97, 100, 238);
+    }
+    th {
+      font-weight: 500;
+    }
+    .code-main {
+      width: 600px;
+      margin-left: calc(50% - 300px);
+      margin-top: 5px;
+    }
+    code, pre {
+      border-radius: 4px;
+      user-select: all;+
+      -moz-user-select: all;
+      -webkit-user-select: all;
+      margin: 0px;
+    }
+    pre {
+      padding: 0px;
+    }
+    code::selection, pre::selection {
+      background-color: #333;
+    }
+    h4 {
+      margin-top: 0px;
+      padding: 0px;
+      text-align: left;
+    }
+    </style>
+    <script>
+      hljs.initHighlightingOnLoad();
+      window.addEventListener("load", function() {
+
+      }, false);
+    </script>
+  </head>
+  <body>
+    <div class="window">
+      <header class="toolbar toolbar-header" style="-webkit-app-region: drag;">
+        <h1 class="title">Segment Control</h1>
+      </header>
+      <div class="window-content">
+        <div class="code-main">
+          <h2>Usage</h2>
+          <h3>Required</h3>
+          <p>
+            The "segment.js" file is not required per se. It's just a controller for btn-group
+            <br />
+            Every JS controller can be used for every btn-group!
+          </p>
+          <pre>
+            <code class="html">&#x3c;head&#x3e;
+  ...
+  &#x3c;link rel="stylesheet" href="segment.css" /&#x3e;
+  &#x3c;script type="text/javascript" src="segment.js"&#x3e;&#x3c;/script&#x3e;
+  ...
+&#x3c;/head&#x3e;</code>
+          </pre>
+          <h3>HTML Layout</h3>
+          <p>
+            The attribute "data-group-relationship" controls the relationship between the btns. Default is "relative"
+          </p>
+          <h4>Relative relationship</h4>
+          <pre>
+            <code class="html">...
+  &#x3c;div class="btn-group" data-group-relationship="relative"&#x3e;
+    &#x3c;button class="btn btn-segment active"&#x3e;Segment A&#x3c;/button&#x3e;
+    &#x3c;button class="btn btn-segment"&#x3e;Segment B&#x3c;/button&#x3e;
+    &#x3c;button class="btn btn-segment"&#x3e;Segment C&#x3c;/button&#x3e;
+  &#x3c;/div&#x3e;
+
+  &#x3c;br /&#x3e;&#x3c;br /&#x3e;
+
+  &#x3c;div class="btn-group" data-group-relationship="relative"&#x3e;
+    &#x3c;button class="btn btn-default active"&#x3e;Btn A&#x3c;/button&#x3e;
+    &#x3c;button class="btn btn-default"&#x3e;Btn B&#x3c;/button&#x3e;
+    &#x3c;button class="btn btn-default"&#x3e;Btn C&#x3c;/button&#x3e;
+  &#x3c;/div&#x3e;
+...</code>
+          </pre>
+          <h4>Preview</h4>
+          <div class="btn-group" data-group-relationship="relative">
+            <button class="btn btn-segment active">Segment A</button>
+            <button class="btn btn-segment">Segment B</button>
+            <button class="btn btn-segment">Segment C</button>
+            <button class="btn btn-segment">Segment D</button>
+          </div>
+          <br />
+          <br />
+          <div class="btn-group" data-group-relationship="relative">
+            <button class="btn btn-default active">Btn A</button>
+            <button class="btn btn-default">Btn B</button>
+            <button class="btn btn-default">Btn C</button>
+          </div>
+          <br /><br />
+          <h4>Absolute relationship</h4>
+          <pre>
+            <code class="html">...
+  &#x3c;div class="btn-group" data-group-relationship="absolute"&#x3e;
+    &#x3c;button class="btn btn-segment active"&#x3e;Segment A&#x3c;/button&#x3e;
+    &#x3c;button class="btn btn-segment"&#x3e;Segment B&#x3c;/button&#x3e;
+    &#x3c;button class="btn btn-segment"&#x3e;Segment C&#x3c;/button&#x3e;
+  &#x3c;/div&#x3e;
+
+  &#x3c;br /&#x3e;&#x3c;br /&#x3e;
+
+  &#x3c;div class="btn-group" data-group-relationship="absolute"&#x3e;
+    &#x3c;button class="btn btn-default active"&#x3e;Btn A&#x3c;/button&#x3e;
+    &#x3c;button class="btn btn-default"&#x3e;Btn B&#x3c;/button&#x3e;
+    &#x3c;button class="btn btn-default"&#x3e;Btn C&#x3c;/button&#x3e;
+  &#x3c;/div&#x3e;
+...</code>
+          </pre>
+          <h4>Preview</h4>
+          <div class="btn-group" data-group-relationship="absolute">
+            <button class="btn btn-segment active">Segment A</button>
+            <button class="btn btn-segment">Segment B</button>
+            <button class="btn btn-segment">Segment C</button>
+          </div>
+          <br />
+          <br />
+          <div class="btn-group" data-group-relationship="absolute">
+            <button class="btn btn-default active">Btn A</button>
+            <button class="btn btn-default">Btn B</button>
+            <button class="btn btn-default">Btn C</button>
+          </div>
+          <h4>Same Width</h4>
+          <pre>
+            <code class="html">...
+  &#x3c;div class="btn-group fill-width" style="width: 500px;"&#x3e;
+    &#x3c;button class="btn btn-segment active"&#x3e;Segment A&#x3c;/button&#x3e;
+    &#x3c;button class="btn btn-segment"&#x3e;Segment B&#x3c;/button&#x3e;
+    &#x3c;button class="btn btn-segment"&#x3e;Segment C&#x3c;/button&#x3e;
+  &#x3c;/div&#x3e;
+
+  &#x3c;br /&#x3e;&#x3c;br /&#x3e;
+
+  &#x3c;div class="btn-group fill-width" style="width: 500px;"&#x3e;
+    &#x3c;button class="btn btn-default active"&#x3e;Btn A&#x3c;/button&#x3e;
+    &#x3c;button class="btn btn-default"&#x3e;Btn B&#x3c;/button&#x3e;
+    &#x3c;button class="btn btn-default"&#x3e;Btn C&#x3c;/button&#x3e;
+  &#x3c;/div&#x3e;
+...</code>
+          </pre>
+          <h4>Preview</h4>
+          <div class="btn-group fill-width" style="width: 500px;">
+            <button class="btn btn-segment active">Segment A</button>
+            <button class="btn btn-segment">Segment B</button>
+            <button class="btn btn-segment">Segment C</button>
+          </div>
+          <br />
+          <br />
+          <div class="btn-group fill-width" style="width: 500px;">
+            <button class="btn btn-default active">Btn A</button>
+            <button class="btn btn-default">Btn B</button>
+            <button class="btn btn-default">Btn C</button>
+          </div>
+          <br /><br />
+          <h3 style="margin-top: 50px;">JavaScript Reference</h3>
+          <p>
+            "segment.js" is just a global JS controller for every btn-group. Therefore you can use it not only for segments.
+            <h4>Rules</h4>
+            <ol>
+              <li>A "btn-group" element has the prototype function "updateBtnGroup()"</li>
+              <li>A "btn-group" element has the event "activate"</li>
+            </ol>
+          </p>
+          <pre>
+            <code class="javascript">var myBtnGroup = document.getElementsByClassName("btn-group")[0]; //Example for an "btn-group"
+var myBtn = myBtnGroup.childNodes[0]; //Example for an "btn" within our "btn-group"
+
+//Update the btn-group. First argument is the "btn" element. Use it for manual updating a btn-group
+myBtnGroup.updateBtnGroup(myBtn);
+
+//Event Listening for changes
+myBtnGroup.addEventListener("activate", function() {
+  event.detail;                   //Event details
+  event.detail.targetBtn;         //The clicked "btn" element
+  event.detail.groupRelationship; //Relationship between the "btn" elements
+  console.log(event.detail);
+}, false);</code>
+          </pre>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

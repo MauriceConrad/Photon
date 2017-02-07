@@ -1,0 +1,69 @@
+div:not(.tool-bar) > input:not([type="range"]):not([type="color"]) {
+  height: auto;
+  height: inherit;
+  font-size: 12px;
+  height: 13px;
+  padding: 10px 6px 10px 6px;
+  outline: none;
+  border: 1px solid #dbdbdb;
+  margin: 5px;
+  cursor: text;
+}
+div:not(.tool-bar) > input:not([type="range"]):not([type="color"]):focus {
+  border: 1px solid rgba(159, 204, 250, 1);
+  border-radius: 1px;
+  box-shadow: 0px 0px 0px 4px rgba(159, 204, 250, 1);
+  animation: showFocus .3s;
+}
+@keyframes showFocus {
+  0% {
+    border: 1px solid #dbdbdb;
+    border-radius: -1px;
+    box-shadow: 0px 0px 0px 14px rgba(159, 204, 250, 0);
+    /*outline: 14px solid rgba(159, 204, 250, 0);
+    outline-offset: 0px;*/
+  }
+  100% {
+    border: 1px solid #dbdbdb;
+    border-radius: 1px;
+    box-shadow: 0px 0px 0px 4px rgba(159, 204, 250, 1);
+    /*outline: 4px solid rgba(159, 204, 250, 1);
+    outline-offset: -1px;*/
+  }
+}
+
+div:not(.tool-bar) > .toolbar input:not([type="range"]):not([type="color"]) {
+  font-size: 13px;
+  height: 14px;
+  padding: 11px 6px 11px 6px;
+  border-radius: 4px;
+  border-color: #c2c2c2;
+  margin: 0px 0px 3px 0px;
+}
+div:not(.tool-bar) > .toolbar input:not([type="range"]):not([type="color"]):focus {
+  border-color: #9fccfa;
+  border-radius: 4px;
+}
+div:not(.tool-bar) > input[type="search"] {
+  text-indent: 0px;
+  text-align: center;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 50 50"><circle cx="20" cy="20" r="17" style="fill: none; stroke: #6a6a6a; stroke-width: 3px;"/><line x1="31" y1="31" x2="49" y2="49" style="stroke: #6a6a6a; stroke-width: 3.5px;"/></svg>');
+  background-size: auto 65%;
+  background-repeat: no-repeat;
+  background-position: 5px center;
+  text-align: center;
+  text-indent: 12px;
+  border-radius: 10px;
+}
+div:not(.tool-bar) > input[type="search"]:focus {
+  text-align: left;
+  text-indent: 15px;
+}
+div:not(.tool-bar) > input[type="search"]::-webkit-input-placeholder {
+  /*text-align: center;*/
+
+
+}
+div:not(.tool-bar) > input[type="search"]:focus::-webkit-input-placeholder {
+  /*text-align: left;*/
+}

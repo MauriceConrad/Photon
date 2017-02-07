@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Progress Bar on Retina</title>
+    <link rel="stylesheet" href="css/photon.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="dist/frame-list.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/tomorrow-night-eighties.css">
+    <script src="js/highlight.min.js"></script>
+    <script type="text/javascript" src="dist/frame-list.js"></script>
+    <style media="screen">
+    .window-content {
+      background-color: rgb(255, 255, 255);
+    }
+    .code-main {
+      width: 600px;
+      margin-left: calc(50% - 300px);
+      margin-top: 5px;
+    }
+    code, pre {
+      border-radius: 4px;
+      user-select: all;+
+      -moz-user-select: all;
+      -webkit-user-select: all;
+      margin: 0px;
+    }
+    p {
+      padding: 0;
+      margin: 0;
+    }
+    </style>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+    </script>
+  </head>
+  <body>
+    <div class="window">
+      <header class="toolbar toolbar-header" style="-webkit-app-region: drag;">
+
+      </header>
+      <div class="window-content theme-gray">
+        <div class="code-main">
+          <h2>Required</h2>
+          <h3>Head</h3>
+          <p>
+            Please remeber, this package contains 3 different components:
+            <ol>
+              <li>
+                <i>main-border</i>
+                Doesn't need any javascript, just CSS
+              </li>
+              <li>
+                <i>content-frame</i>
+                Doesn't need any javascript, just CSS
+              </li>
+              <li>
+                <i>list-select & list-editable</i>
+                Need javascript (and CSS of course) for controlling itself
+              </li>
+            </ol>
+            <b>Why there are 3 components in one?</b>
+            <br />
+            Because the list-select or list-editable are something that only exists within an content-frame and the main-border is a so simple component that is thematically in nearby of content-frame.
+          </p>
+          <pre>
+            <code class="html">...
+  &#x3c;link rel="stylesheet" href="frame-list.css" /&#x3e;
+  &#x3c;script type="text/javascript" src="frame-list.js"&#x3e;&#x3c;/script&#x3e;
+...</code>
+          </pre>
+          <h2>Body</h2>
+          <h3>Content Frame</h3>
+          <p>The frame-inner is the white area. Optional you can also use panes within the content-frame</p>
+          <pre>
+            <code class="html">...
+  &#x3c;div class="content-frame" style="height: 300px;"&#x3e;
+    &#x3c;!--Default height is auto with minimum 100px--&#x3e;
+    &#x3c;div class="frame-inner"&#x3e;
+      ...
+    &#x3c;/div&#x3e;
+    &#x3c;div class="toolbar"&#x3e;
+      ...
+      &#x3c;button class="btn btn-add"&#x3e;&#x3c;/button&#x3e;
+      &#x3c;button class="btn btn-remove" disabled&#x3e;&#x3c;/button&#x3e;
+      ...
+    &#x3c;/div&#x3e;
+  &#x3c;/div&#x3e;
+...</code>
+          </pre>
+          <div class="content-frame" style="height: 300px;">
+            <div class="frame-inner"></div>
+            <div class="toolbar">
+              <button class="btn btn-add"></button>
+              <button class="btn btn-remove" disabled></button>
+            </div>
+          </div>
+          <h3>List-Select</h3>
+
+          <pre>
+            <code class="html">...
+  &#x3c;div class="frame-inner"&#x3e;
+    ...
+    &#x3c;ul class="list-select list-editable"&#x3e;
+      &#x3c;li class="active" draggable="true"&#x3e;
+        &#x3c;details&#x3e;
+          &#x3c;summary&#x3e;Apple&#x3c;/summary&#x3e;
+          &#x3c;ul&#x3e;
+            &#x3c;li&#x3e;
+              Test
+            &#x3c;/li&#x3e;
+            &#x3c;li&#x3e;Einfarbig&#x3c;/li&#x3e;
+          &#x3c;/ul&#x3e;
+        &#x3c;/details&#x3e;
+      &#x3c;/li&#x3e;
+      &#x3c;li draggable="true"&#x3e;
+        &#x3c;span&#x3e;Fotos&#x3c;/span&#x3e;
+      &#x3c;/li&#x3e;
+      &#x3c;li draggable="true"&#x3e;
+        &#x3c;span&#x3e;Ordner&#x3c;/span&#x3e;
+      &#x3c;/li&#x3e;
+    &#x3c;/ul&#x3e;
+    ...
+  &#x3c;/div&#x3e;
+...</code>
+          </pre>
+          <div class="content-frame">
+            <div class="frame-inner">
+              <ul class="list-select list-editable">
+                <li class="active" draggable="true">
+                  <details>
+                    <summary>Apple</summary>
+                    <ul>
+                      <li>
+                        Test
+                      </li>
+                      <li>Einfarbig</li>
+                    </ul>
+                  </details>
+                </li>
+                <li draggable="true">
+                  <span>Fotos</span>
+                </li>
+                <li draggable="true">
+                  <span>Ordner</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <h3>Main Border and Theme Gray</h3>
+          <p>The Main Border is just a simple stilistic frame you know from the settings app or something similar. It makes only sense if the window-content has the class "theme-gray"</p>
+          <pre>
+            <code class="html">&#x3c;div class="window-content theme-gray"&#x3e;
+  ...
+  &#x3c;div class="main-border"&#x3e;
+    Main Border Content
+  &#x3c;/div&#x3e;
+  ...
+&#x3c;/div&#x3e;</code>
+          </pre>
+          <div class="main-border">
+            Main Border Content
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

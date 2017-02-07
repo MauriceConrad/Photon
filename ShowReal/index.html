@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/photon.css">
+    <link rel="stylesheet" href="../Photon-Components/tab/dist/tabs-custom.css">
+    <link rel="stylesheet" href="../Photon-Components/swipe/dist/swipe.css">
+    <link rel="stylesheet" href="../Photon-Components/frame-list/dist/frame-list.css">
+    <link rel="stylesheet" href="../Photon-Components/dialog/dist/dialog.css">
+    <link rel="stylesheet" href="../Photon-Components/input/dist/input.css">
+    <link rel="stylesheet" href="../Photon-Components/slider/dist/range.css">
+    <link rel="stylesheet" href="../Photon-Components/segment/dist/segment.css">
+    <link rel="stylesheet" href="../Photon-Components/button-system/dist/btn.css">
+    <link rel="stylesheet" href="../Photon-Components/progress-bar/dist/progress.css">
+    <link rel="stylesheet" href="../Photon-Components/progress-circle/dist/progress-circle.css">
+    <link rel="stylesheet" href="../Photon-Components/messages/dist/messages.css">
+    <script type="text/javascript" src="../Photon-Components/tab/dist/tabs.js"></script>
+    <script type="text/javascript" src="../Photon-Components/segment/dist/segment.js"></script>
+    <script type="text/javascript" src="../Photon-Components/swipe/dist/swipe.js"></script>
+    <script type="text/javascript" src="../Photon-Components/frame-list/dist/frame-list.js"></script>
+    <script type="text/javascript" src="../Photon-Components/dialog/dist/dialog.js"></script>
+    <script type="text/javascript" src="../Photon-Components/slider/dist/range.js"></script>
+    <script type="text/javascript" src="../Photon-Components/progress-circle/dist/progress-circle.js"></script>
+    <script type="text/javascript" src="../Photon-Components/messages/dist/messages.js"></script>
+    <title>Show Real Photon</title>
+    <script type="text/javascript">
+      window.addEventListener("load", function() {
+        var componentGroup = document.getElementsByClassName("component-groups")[0];
+        componentGroup.addEventListener("activate", function(event) {
+          var viewSelector = event.detail.targetBtn.getAttribute("data-view");
+          var btns = this.getElementsByTagName("button");
+          for (var i = 0; i < btns.length; i++) {
+            document.querySelector(btns[i].getAttribute("data-view")).style.display = "none";
+          }
+          document.querySelector(viewSelector).style.removeProperty("display");
+        });
+        document.getElementsByClassName("btn-show-popup")[0].addEventListener("click", function() {
+          //console.log(this);
+          dialogAction(document.getElementById("test-dialog"));
+        });
+        document.getElementsByClassName("progress-circle")[0].updateCircleProgress(62.5);
+      });
+    </script>
+    <style media="screen">
+
+    </style>
+  </head>
+  <body>
+    <div class="window">
+      <header class="toolbar toolbar-header">
+        <h1 class="title" style="-webkit-app-region: drag;">Show Real</h1>
+        <div class="toolbar-actions" style="text-align: center;">
+          <div class="btn-group component-groups" data-group-relationship="absolute">
+            <button class="btn btn-default active" data-view="#swipe">Swipe</button>
+            <button class="btn btn-default" data-view="#frames">Frame List</button>
+            <button class="btn btn-default" data-view="#messages">Messages</button>
+            <button class="btn btn-default" data-view="#other">Small Components</button>
+          </div>
+          <button class="btn btn-default pull-left btn-show-popup">Pop Up</button>
+          <input type="search" class="pull-right" style="margin-right: 6px;" placeholder="Search">
+        </div>
+      </header>
+      <div class="tab-group">
+        <div class="tab-item tab-item-fixed active">
+          Fixed Tab
+        </div>
+        <div class="tab-item">
+          <span class="icon-close-tab"></span>
+          Tab 2
+        </div>
+        <div class="tab-item">
+          <span class="icon-close-tab"></span>
+          Tab 3
+        </div>
+        <div class="tab-item tab-item-fixed btn btn-add-tab"></div>
+      </div>
+      <div class="window-dialogs">
+        <div class="dialog" id="test-dialog">
+          Dialog
+        </div>
+      </div>
+      <div class="window-content theme-gray">
+        <div id="swipe">
+          <div class="pane-group" style="background-color: #fff;">
+            <div class="pane-sm sidebar">
+              <ul class="list-group">
+                <li class="list-group-item list-item-swipe">
+                  <div class="swipe-actions swipe-actions-left">
+                    <div class="action" style="background-color: #006ff1;">
+                      <div class="action-inner">
+                        Action
+                      </div>
+                    </div>
+                    <div class="action" style="background-color: #00b16c;">
+                      <div class="action-inner">
+                        Action
+                      </div>
+                    </div>
+                    <div class="action" style="background-color: #b30606;">
+                      <div class="action-inner">
+                        Action
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-inner">
+                    <img class="img-circle media-object pull-left" src="../Photon-Components/swipe/imgs/avatar1.png" width="32" height="32" alt="" />
+                    <div class="media-body">
+                      <strong>Maurice Conrad</strong>
+                      <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item list-item-swipe">
+                  <div class="swipe-actions swipe-actions-left">
+                    <div class="action" style="background-color: #9600a3; width: 100px;">
+                      <div class="action-inner">
+                        Action Long
+                      </div>
+                    </div>
+                    <div class="action" style="background-color: #b8c800; width: 100px;">
+                      <div class="action-inner">
+                        Action 100px
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-inner">
+                    <img class="img-circle media-object pull-left" src="../Photon-Components/swipe/imgs/avatar2.png" width="32" height="32" alt="" />
+                    <div class="media-body">
+                      <strong>Sikk</strong>
+                      <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                  </div>
+                  <div class="swipe-actions swipe-actions-right">
+                    <div class="action" style="background-color: #0f9383;">
+                      <div class="action-inner">
+                        Action Right
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="pane">
+              ss
+            </div>
+          </div>
+        </div>
+        <div id="frames" style="display: none;">
+          <div class="main-border">
+            <div class="content-frame">
+              <div class="frame-inner">
+                <ul class="list-select list-editable">
+                  <li class="active" draggable="true">
+                    <details>
+                      <summary>Apple</summary>
+                      <ul>
+                        <li>
+                          Test
+                        </li>
+                        <li>Einfarbig</li>
+                      </ul>
+                    </details>
+                  </li>
+                  <li draggable="true">
+                    <span>Fotos</span>
+                  </li>
+                  <li draggable="true">
+                    <span>Ordner</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="messages" style="display: none; height: 100%;">
+          <div class="messages-view" style="height: 100%; position: relative;">
+            <ul class="messages">
+              <li data-type="system">
+                <div class="message-content">
+                  Chat with Somebody
+                </div>
+                <div class="message-description">
+                  Today, 11:00
+                </div>
+              </li>
+              <li data-type="self">
+                <div class="message-content">
+                  What's up?
+                </div>
+                <div class="message-description">
+                  Sent at 12:00
+                </div>
+              </li>
+              <li data-type="extern">
+                <div class="message-content">
+                  Everything okay. How are you doing?
+                </div>
+                <div class="message-description">
+                  Sent at 12:01
+                </div>
+              </li>
+              <li data-type="extern">
+                <div class="message-content">
+                  Answer me!
+                </div>
+                <div class="message-description">
+                  Sent at 12:21
+                </div>
+              </li>
+              <li data-type="self">
+                <div class="message-content">
+                  Sorry, my daugther drove my car...
+                </div>
+                <div class="message-description">
+                  Sent at 12:26
+                </div>
+              </li>
+              <li data-type="extern">
+                <div class="message-content">
+                  Your daugther?! She's just 12 years old, or???
+                </div>
+                <div class="message-description">
+                  Sent at 12:26
+                </div>
+              </li>
+              <li data-type="self">
+                <div class="message-content">
+                  Yes... But she's crazy as fuck
+                </div>
+                <div class="message-description">
+                  Sent at 12:27
+                </div>
+              </li>
+            </ul>
+            <div class="tool-bar">
+              <input type="text" class="message-input" placeholder="iMessage">
+              <button class="btn btn-emojis btn-input" data-insert-target=".message-input"></button>
+              <button class="btn btn-mic"></button>
+            </div>
+          </div>
+        </div>
+        <div id="other" style="display: none;">
+          <div class="main-border" style="text-align: center;">
+            <div class="btn-group" data-group-relationship="absolute" style="margin-top: -45px">
+              <button class="btn btn-segment active">Segment A</button>
+              <button class="btn btn-segment">Segment B</button>
+              <button class="btn btn-segment">Segment C</button>
+            </div>
+            <br />
+            <div class="btn-group" data-group-relationship="relative">
+              <button class="btn btn-segment active">Segment 1</button>
+              <button class="btn btn-segment">Segment 2</button>
+              <button class="btn btn-segment">Segment 3</button>
+            </div>
+            <br /><br />
+            <input type="text" value="Text">
+            <br /><br />
+            <input type="range" class="slider slider-round blue" style="width: 200px;">
+            <br />
+            <input type="range" class="slider slider-square" style="width: 200px; margin-top: 15px;">
+            <br />
+            <input type="range" class="slider slider-square-inverted" style="width: 200px; margin-top: 15px;">
+            <br /><br />
+            <button class="btn btn-system">Cancel</button>
+            <button class="btn btn-system btn-active">Button</button>
+            <br /><br />
+            <progress class="progress" value="50" max="100" style="width: 200px;"></progress>
+            <br />
+            <progress class="progress" style="width: 200px;"></progress>
+            <br />
+            <div class="progress-circle"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

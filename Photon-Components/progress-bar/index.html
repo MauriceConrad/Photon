@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Progress Bar on Retina</title>
+    <link rel="stylesheet" href="css/photon.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="dist/progress.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/tomorrow-night-eighties.css">
+    <script src="js/highlight.min.js"></script>
+    <style media="screen">
+    .window-content {
+      background-color: rgb(255, 255, 255);
+    }
+    .code-main {
+      width: 600px;
+      margin-left: calc(50% - 300px);
+      margin-top: 5px;
+    }
+    code, pre {
+      border-radius: 4px;
+      user-select: all;+
+      -moz-user-select: all;
+      -webkit-user-select: all;
+      margin: 0px;
+    }
+    p {
+      padding: 0;
+      margin: 0;
+    }
+    </style>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+    </script>
+  </head>
+  <body>
+    <div class="window" style="-webkit-app-region: drag;">
+      <header class="toolbar toolbar-header">
+
+      </header>
+      <div class="window-content">
+        <div class="code-main">
+          <h1>Progress Bar (Retina!)</h1>
+          <p>
+            Determinate Progress Bar
+            <pre>
+              <code class="html">&#x3c;progress value="50" max="100" &#x3e;&#x3c;/progress&#x3e;</code>
+            </pre>
+          </p>
+          <progress value="50" max="100"></progress>
+          <br /><br /><br />
+          <p>
+            Indeterminate Progress Bar (No "value" attribute)
+            <pre>
+              <code class="html">&#x3c;progress&#x3e;&#x3c;/progress&#x3e;</code>
+            </pre>
+          </p>
+          <progress></progress>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

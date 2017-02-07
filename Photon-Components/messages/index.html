@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/photon.css">
+    <link rel="stylesheet" href="dist/messages.css">
+    <link rel="stylesheet" href="css/atom-one-light.css">
+    <script src="js/highlight.min.js"></script>
+    <script type="text/javascript" src="dist/messages.js"></script>
+    <title>Messages</title>
+    <style media="screen">
+      .window-content {
+        background-color: rgb(236, 236, 236);
+      }
+      .code-main {
+        width: 600px;
+        margin-left: calc(50% - 300px);
+        margin-top: 5px;
+      }
+      code, pre {
+        border-radius: 4px;
+        user-select: all;+
+        -moz-user-select: all;
+        -webkit-user-select: all;
+        margin: 0px;
+      }
+    </style>
+    <script type="text/javascript">
+
+      var messager;
+      window.addEventListener("load", function() {
+        var btnShowCode = document.getElementsByClassName("btn-show-code")[0];
+        btnShowCode.addEventListener("click", addDocumentation);
+        var messagesViews = document.getElementsByClassName("messages-view");
+        messager = new Messenger(messagesViews[0]);
+        setTimeout(function() {
+          var messages = messager.getMessages();
+          console.log(messages);
+        }, 1000);
+        addDocumentation();
+        messager.messageContainer.addEventListener("select", function(event) {
+          console.log("Selected Message! Event.detail", event.detail);
+        });
+      });
+      function addDocumentation() {
+        var code = [
+          createElement({
+            tagName: "pre",
+            childs: [
+              createElement({
+                tagName: "code",
+                className: "html",
+                childs: [
+                  document.createTextNode('<div class="messages-view">\n  <div class="tool-bar">\n    ...\n  </div>\n  <ul class="messages">\n    ...\n  </ul>\n  <div class="tool-bar">\n    ...\n  </div>\n</div>')
+                ]
+              })
+            ]
+          }),
+          createElement({
+            tagName: "pre",
+            childs: [
+              createElement({
+                tagName: "code",
+                className: "html",
+                childs: [
+                  document.createTextNode('...\n<ul class="messages">\n  <li data-type="self">\n    <div class="message-content">\n      This is a message!\n    </div>\n    <div class="message-description">\n      Sent at 00:00\n    </div>\n  </li>\n</ul>\n...')
+                ]
+              })
+            ]
+          }),
+          createElement({
+            tagName: "pre",
+            childs: [
+              createElement({
+                tagName: "code",
+                className: "html",
+                childs: [
+                  document.createTextNode('...\n<div class="tool-bar">\n  ...\n</div>\n...')
+                ]
+              })
+            ]
+          }),
+          createElement({
+            tagName: "pre",
+            childs: [
+              createElement({
+                tagName: "code",
+                className: "html",
+                childs: [
+                  document.createTextNode('...\n<div class="tool-bar">\n  <div class="bar-inner">\n    ...\n  </div>\n</div>\n...')
+                ]
+              })
+            ]
+          }),
+          createElement({
+            tagName: "pre",
+            childs: [
+              createElement({
+                tagName: "code",
+                className: "html",
+                childs: [
+                  document.createTextNode('...\n<div class="tool-bar">\n  <input type="text" class="message-input" placeholder="iMessage">\n  <button class="btn btn-emojis btn-input" data-insert-target=".message-input"></button>\n  <button class="btn btn-mic"></button>\n</div>\n...')
+                ]
+              })
+            ]
+          }),
+          createElement({
+            tagName: "pre",
+            childs: [
+              createElement({
+                tagName: "code",
+                className: "html",
+                childs: [
+                  document.createTextNode('<div class="messages-view">\n  <div class="tool-bar">\n    <div class="bar-inner">\n      An: Developer\n    </div>\n  </div>\n  <ul class="messages">\n    <li data-type="system">\n      <div class="message-content">\n        iMessage with Developer\n      </div>\n      <div class="message-description">\n        Today, 1100\n      </div>\n    </li>\n    <li data-type="self">\n      <div class="message-content">\n        Hi, whats:s up?\n      </div>\n      <div class="message-description">\n        Delivered at 11:58\n      </div>\n    </li>\n    <li data-type="extern">\n      <div class="message-content">\n        Everthing fine, you?\n      </div>\n      <div class="message-description">\n        Delivered at 12:00\n      </div>\n    </li>\n    <li data-type="self">\n      <div class="message-content">\n        Not really, I mean come on, Donald Trump is real.\n      </div>\n      <div class="message-description">\n        Delivered at 12:01\n      </div>\n    </li>\n    <li data-type="self">\n      <div class="message-content">\n        What do you think about it?\n      </div>\n    </li>\n    <li data-type="extern">\n      <div class="message-content">\n        Yeah but he\'s still funny at all\n      </div>\n      <div class="message-description">\n        Delivered at 12:02\n      </div>\n    </li>\n  </ul>\n  <div class="tool-bar">\n    <input type="text" class="message-input" placeholder="iMessage">\n    <button class="btn btn-emojis btn-input" data-insert-target=".message-input"></button>\n    <button class="btn btn-mic"></button>\n  </div>\n</div>')
+                ]
+              })
+            ]
+          }),
+          createElement({
+            tagName: "pre",
+            childs: [
+              createElement({
+                tagName: "code",
+                className: "javascript",
+                childs: [
+                  document.createTextNode('var messagesViews = document.getElementsByClassName("messages-view");\nvar messenger = new Messenger(messagesViews[0]);\n\nmessager.addMessage({\n  type: "extern", // "extern" || "self" || "system"\n  content: "Message Text" // string || DOMElementNode,\n  account: "mauriceconrad@icloud.com",\n  receiver: "somebody@icloud.com"\n});\n\nvar messages = messager.getMessages();\nconsole.log(messages);')
+                ]
+              })
+            ]
+          })
+        ];
+        for (var i = 0; i < code.length; i++) {
+          hljs.highlightBlock(code[i].getElementsByTagName("code")[0]);
+        }
+        messager.addMessage({
+          type: "system",
+          content: "Code",
+          account: "mauriceconrad@icloud.com",
+          receiver: "somebody@icloud.com"
+        });
+        messager.addMessage({
+          type: "self",
+          content: 'What is the general HTML layout?',
+          account: "mauriceconrad@icloud.com",
+          receiver: "somebody@icloud.com"
+        });
+        messager.addMessage({
+          type: "extern",
+          content: code[0],
+          account: "mauriceconrad@icloud.com",
+          receiver: "somebody@icloud.com"
+        });
+        messager.addMessage({
+          type: "self",
+          content: 'Okay, but how can I define the messages within the ul list?',
+          account: "mauriceconrad@icloud.com",
+          receiver: "somebody@icloud.com"
+        });
+        messager.addMessage({
+          type: "extern",
+          content: code[1],
+          account: "mauriceconrad@icloud.com",
+          receiver: "somebody@icloud.com"
+        });
+        messager.addMessage({
+          type: "extern",
+          content: 'The data-type attribute can have the following values: "self", "extern" or "system"',
+          account: "mauriceconrad@icloud.com",
+          receiver: "somebody@icloud.com"
+        });
+        messager.addMessage({
+          type: "self",
+          content: "How are the toolbars structured?",
+          account: "mauriceconrad@icloud.com",
+          receiver: "somebody@icloud.com"
+        });
+        messager.addMessage({
+          type: "extern",
+          content: code[2],
+          account: "mauriceconrad@icloud.com",
+          receiver: "somebody@icloud.com"
+        });
+        messager.addMessage({
+          type: "extern",
+          content: 'You can set a toolbar before and after the "messages" ul list. If your toolbar conatains just text and buttons, use the "bar-inner" div within it, it manages the paddings and so on. If your toolbar contains an input field and connected buttons, don\'t use it.',
+          account: "mauriceconrad@icloud.com",
+          receiver: "somebody@icloud.com"
+        });
+        messager.addMessage({
+          type: "extern",
+          content: code[3],
+          account: "mauriceconrad@icloud.com",
+          receiver: "somebody@icloud.com"
+        });
+        messager.addMessage({
+          type: "extern",
+          content: code[4],
+          account: "mauriceconrad@icloud.com",
+          receiver: "somebody@icloud.com"
+        });
+        messager.addMessage({
+          type: "self",
+          content: 'I need a complete code example!',
+          account: "mauriceconrad@icloud.com",
+          receiver: "somebody@icloud.com"
+        });
+        messager.addMessage({
+          type: "extern",
+          content: code[5],
+          account: "mauriceconrad@icloud.com",
+          receiver: "somebody@icloud.com"
+        });
+        messager.addMessage({
+          type: "self",
+          content: 'Is there a JavaScript API for it?',
+          account: "mauriceconrad@icloud.com",
+          receiver: "somebody@icloud.com"
+        });
+        messager.addMessage({
+          type: "extern",
+          content: code[6],
+          account: "mauriceconrad@icloud.com",
+          receiver: "somebody@icloud.com"
+        });
+      }
+      if (window.navigator.userAgent.indexOf("Chrome") == -1) alert("This modul is made for electron that is based on chromium. \n\nBecause of some feautures you should use a chromium browser like Chrome or Opera or electron instantly, otherwise it's possible that some graphical and native stuff will not work as expected.");
+    </script>
+  </head>
+  <body>
+    <div class="window">
+      <div class="window-content">
+        <div class="messages-view">
+          <div class="tool-bar">
+            <div class="bar-inner">
+              An: Developer
+              <button class="btn btn-text btn-show-code" style="float: right; margin-right: 10px;">Code </button>
+            </div>
+          </div>
+          <ul class="messages"></ul>
+          <div class="tool-bar">
+            <input type="text" class="message-input" placeholder="iMessage">
+            <button class="btn btn-emojis btn-input" data-insert-target=".message-input"></button>
+            <button class="btn btn-mic"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+    </script>
+  </body>
+</html>

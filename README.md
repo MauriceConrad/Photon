@@ -1,0 +1,612 @@
+# PhotonKit-Components
+
+Some components for the PhtonKit Framework to build native UI's in CSS/JS.
+
+## Native Button
+
+PhotonKit doesn't offers a real native looking button solution for the default button in macOS. Of course there is a button named "btn-primary", that has a blue background and another one called "btn-default" thats background-color is grey, but they are not perfect. This component contains a better, more native looking button component with the class "btn btn-system".
+
+Fiddle: https://jsfiddle.net/cw7335h9/
+
+![Native Button on normal displays](http://s18.postimg.org/y43j4x61l/Bildschirmfoto_2016_09_26_um_19_23_22.png)
+![Native Button on retina displays (pixel-ratio=2)](http://s22.postimg.org/457yfv2bl/Bildschirmfoto_2016_09_26_um_19_23_06.png)
+
+### Head
+```html
+...
+  <link rel="stylesheet" href="path/to/photon.css" />
+  <link rel="stylesheet" href="path/to/btn.css" />
+...
+```
+
+### Body
+```html
+...
+  <button class="btn btn-system">Cancel</button>
+  <button class="btn btn-system btn-active">Continue</button>
+...
+```
+
+## Dialog
+
+This component is used for a dialog in the window.
+Dialog containers are located in the "window-dialogs" element within the "window" element below the "toolbar toolbar-header" element.
+
+Fiddle: https://jsfiddle.net/o0hqvppu/
+
+![Dialog](http://s3.postimg.org/5athwvbkz/Bildschirmfoto_2016_09_26_um_21_00_12.png)
+
+### Head
+```html
+...
+  <link rel="stylesheet" href="path/to/photon.css" />
+  <link rel="stylesheet" href="path/to/dialog.css" />
+  <script src="path/to/dialog.js" type="text/javascript"></script>
+...
+```
+
+### Body
+
+#### Main Element
+```html
+...
+<div class="window">
+  ...
+  <div class="window-dialogs">
+    ...
+  </div>
+  ...
+</div>
+...
+```
+
+#### Dialog
+
+```html
+...
+<div class="window-dialogs">
+  ...
+  <div class="dialog">
+    This is the context of the dialog.
+  </div>
+  ...
+</div>
+...
+```
+
+### JavaScript Controlling
+
+```javascript
+var myDialogElement = document.getElementsByClassName("dialog")[0];
+
+//dialogAction([dialogElement], [options]); //All options are optional
+
+dialogAction(myDialogElement, {
+  action: "auto", // Can be "show", "hide" or "auto" | default: "auto"
+  animation: true, // Set if the dialog shows or hides itself with an animation | default: true
+  animationSpeed: 300 // Set the speed of the animation in ms | default: 300
+});
+```
+
+
+## Segmented Control & Btn-Group Controller
+
+The segmented control is based on the layout for a "btn-group". In addition there is a controller for the "btn-group" that can also used for a traditional "btn-group".
+
+The attribute "data-group-relationship" set the relationship between the buttons within the btn-group. If this attribute is "relative" every button can be activated or deactivated. If the attribute is "absolute" there is always one active element. If you activate some, the current active one will be disactived. By default data-group-relationship is "relative".
+
+Fiddle: https://jsfiddle.net/wc2h5cp4/
+
+![Segmented Control](http://s17.postimg.org/niwj0s50f/Bildschirmfoto_2016_09_26_um_21_18_15.png)
+
+
+
+### Head
+```html
+...
+  <link rel="stylesheet" href="path/to/photon.css" />
+  <link rel="stylesheet" href="path/to/segment.css" />
+  <script src="path/to/segment.js" type="text/javascript"></script>
+...
+```
+
+### Body
+
+```html
+...
+<!--data-group-relationship = "relative"-->
+<div class="btn-group" data-group-relationship="relative">
+  <button class="btn btn-segment active">Segment 1</button>
+  <button class="btn btn-segment">Segment 2</button>
+  <button class="btn btn-segment">Segment 3</button>
+</div>
+
+<br /><br />
+
+<!--data-group-relationship = "absolute"-->
+<div class="btn-group" data-group-relationship="absolute">
+  <button class="btn btn-segment active">Segment 1</button>
+  <button class="btn btn-segment">Segment 2</button>
+  <button class="btn btn-segment">Segment 3</button>
+</div>
+...
+```
+
+### JavaScript Events
+
+#### Activate
+Every btn-group has the prototype function updateBtnGroup() for manually updating
+```javascript
+var myBtnGroup = document.getElementsByClassName("btn-group")[0]; //Example for an "btn-group"
+var myBtn = myBtnGroup.childNodes[0]; //Example for an "btn" within our "btn-group"
+
+//Update the btn-group. First argument is the button element that needs to be activated. Use it for manual activating a button.
+myBtnGroup.updateBtnGroup(myBtn);
+
+//Event Listening for changes
+myBtnGroup.addEventListener("activate", function() {
+  event.detail;                   //Event details
+  event.detail.targetBtn;         //The clicked "btn" element
+  event.detail.groupRelationship; //Relationship between the "btn" elements
+  console.log(event.detail);
+}, false);
+```
+
+## Slider
+
+Fiddle: https://jsfiddle.net/pq9kny07/
+
+
+![Sliders](https://picload.org/image/rdipoppp/bildschirmfoto2016-11-06um21.1.png)
+![Sliders Retina](https://picload.org/image/rdipopwa/bildschirmfoto2016-11-06um21.1.png)
+
+### Head
+```html
+...
+  <link rel="stylesheet" href="path/to/photon.css" />
+  <link rel="stylesheet" href="path/to/range.css" />
+  <script src="path/to/range.js" type="text/javascript"></script>
+...
+```
+
+### Body
+
+#### Default
+
+```html
+<input type="range" class="slider slider-round" />
+```
+![Slider Default](https://picload.org/image/rdiplrdo/bildschirmfoto2016-11-06um21.2.png)
+
+#### Slider-Round with colors
+```html
+<!--Blue (Default)-->
+<input type="range" class="slider slider-round blue" />
+<!--Gray-->
+<input type="range" class="slider slider-round gray" />
+```
+![Sliders with Colors](https://picload.org/image/rdiplrdw/bildschirmfoto2016-11-06um21.2.png)
+
+#### Slider-Squared
+
+```html
+<!--Normal Square-->
+<input type="range" class="slider slider-square" />
+<!--Square Inverted-->
+<input type="range" class="slider slider-square-inverted" />
+```
+![Sliders Squared](https://picload.org/image/rdiplrap/bildschirmfoto2016-11-06um21.2.png)
+
+#### Sliders Sizes
+
+```html
+<!--Small Slider-->
+<input type="range" class="slider slider-round slider-small" />
+<!--Bold Slider-->
+<input type="range" class="slider slider-round slider-bold" />
+```
+![Slider Sizes](https://picload.org/image/rdiplrla/bildschirmfoto2016-11-06um21.2.png)
+
+#### Slider Vertical
+
+```html
+<input type="range" class="slider slider-round slider-vertical" />
+```
+![Slider Vertical](https://picload.org/image/rdiplrlw/bildschirmfoto2016-11-06um21.2.png)
+
+## Swipe
+
+The swipe elements are smart action buttons, that appear if you swipe on the trackpad or magic mouse over an list-group-item.
+
+![Swipe Items](https://picload.org/image/rdiplpgl/bildschirmfoto2016-11-06um22.0.png)
+
+### HEAD
+
+```html
+...
+  <link rel="stylesheet" href="path/to/photon.css" />
+  <link rel="stylesheet" href="path/to/swipe.css" />
+  <script type="text/javascript" src="path/to/swipe.js"></script>
+...
+```
+
+### BODY
+
+The Swipe Items are contained in the PhotonKit "list-group-item"s of "list-group". But the structure of the items is a little bit more complicated.
+
+#### list-group-item classes
+
+```html
+<li class="list-group-item list-item-swipe">
+  ...
+</li>
+```
+
+#### list-group-item structure
+```html
+...
+  <li class="list-group-item list-item-swipe">
+    <div class="swipe-actions swipe-actions-left">
+      <!--The actions are here contained-->
+    </div>
+    <div class="item-inner">
+      <!--The inner content of the item-->
+    </div>
+    <div class="swipe-actions swipe-actions-right">
+      <!--The actions are here contained-->
+    </div>
+  </li>
+...
+```
+
+**Note**
+
+The DIV tags with the class "swipe-actions" are **optional**.
+If you use them, the swipe-actions tag before the item-inner tag needs the class "swipe-actions-left".
+The one after the item-inner needs the class "swipe-actions-left".
+
+#### swipe-actions structure
+
+```html
+...
+  <div class="swipe-actions swipe-actions-left">
+    ...
+    <div class="action" style="background-color: #ff2e00;">
+      <div class="action-inner">
+        Action
+      </div>
+    </div>
+    ...
+    <div class="action" style="background-color: #1c90da;">
+      <div class="action-inner">
+        Another Action
+      </div>
+    </div>
+    ...
+  </div>
+...
+```
+This example uses the "swipe-actions-left" class for the swipe-actions DIV. Of course, the "swipe-actions-right" DIV has the same structure with "action" tags.
+
+
+#### Complete Structure
+
+```html
+<ul class="list-group">
+  <li class="list-group-item list-item-swipe">
+    <div class="swipe-actions swipe-actions-left">
+      <div class="action" style="background-color: #ff2e00;">
+        <div class="action-inner">
+          Action 2
+        </div>
+      </div>
+      <div class="action" style="background-color: #1c90da;">
+        <div class="action-inner">
+          Action 1
+        </div>
+      </div>
+    </div>
+    <div class="item-inner">
+      <img class="img-circle media-object pull-left" src="imgs/avatar1.png" width="32" height="32" alt="" />
+      <div class="media-body">
+        <strong>Maurice Conrad</strong>
+        <p>Lorem ipsum dolor sit amet</p>
+      </div>
+    </div>
+    <div class="swipe-actions swipe-actions-right">
+      <div class="action" style="background-color: #875ce6;">
+        <div class="action-inner">
+          Action<br />Right
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item list-item-swipe">
+    <div class="swipe-actions swipe-actions-left">
+      <div class="action" style="background-color: #ff2e00;">
+        <div class="action-inner">
+          Action 2
+        </div>
+      </div>
+    </div>
+    <div class="item-inner">
+      <img class="img-circle media-object pull-left" src="imgs/avatar2.png" width="32" height="32" alt="" />
+      <div class="media-body">
+        <strong>Max Mustermann</strong>
+        <p>Lorem ipsum dolor sit amet</p>
+      </div>
+    </div>
+    <div class="swipe-actions swipe-actions-right">
+
+    </div>
+  </li>
+  <li class="list-group-item">
+    <div class="item-inner">
+      <img class="img-circle media-object pull-left" src="imgs/avatar2.png" width="32" height="32" alt="" />
+      <div class="media-body">
+        <strong>Max Mustermann</strong>
+        <p>Lorem ipsum dolor sit amet</p>
+      </div>
+    </div>
+  </li>
+</ul>
+```
+
+### JavaScript
+
+#### Events
+
+##### open
+
+```javascript
+  var mySwipeItem = document.getElementsByClassName("list-item-swipe")[0];
+
+  swipeItems[0].addEventListener("open", function(event) {
+    console.log("Swipe open event", event.detail);
+  }, false);
+```
+
+##### close
+
+```javascript
+  var mySwipeItem = document.getElementsByClassName("list-item-swipe")[0];
+
+  swipeItems[0].addEventListener("close", function(event) {
+    console.log("Swipe close event", event.detail);
+  }, false);
+```
+
+##### action
+
+```javascript
+  var mySwipeItem = document.getElementsByClassName("list-item-swipe")[0];
+
+  swipeItems[0].addEventListener("action", function(event) {
+    console.log("Swipe Action performed", event.detail);
+  }, false);
+```
+
+## Tab Group
+
+PhotonKit offers a tab-group CSS component but there is no JavaScript controller, that give methods and events for the tab items.
+
+In this component the items aren't really different. The syntax is same, there is just the difference that there are a few more classes. For example in addition for "tab-item-fixed", there is also "btn" that is used for the case, that a tab-item-fixed is a button and can't be activated.
+
+The new CSS file "tabs-custom" manages the new classes and give us also a more native looking close button for the tab items because the original from PhotonKit was ugly.
+
+https://jsfiddle.net/5qo1d5dn/
+
+![Tab Group](https://picload.org/image/rdiplwla/bildschirmfoto2016-11-06um22.1.png)
+
+### HEAD
+
+```html
+...
+  <link rel="stylesheet" href="path/to/photon.css" />
+  <link rel="stylesheet" href="path/to/tabs-custom.css" />
+  <script type="text/javascript" src="path/to/tabs.js"></script>
+...
+```
+
+### BODY
+
+Look at the syntax of an example:
+
+```html
+<div class="tab-group" id="tab-group">
+  <div class="tab-item tab-item-fixed">
+    Fixed 1
+  </div>
+  <div class="tab-item active">
+    <span class="icon-close-tab"></span>
+    Tab 1
+  </div>
+  <div class="tab-item">
+    <span class="icon-close-tab"></span>
+    Tab 2
+  </div>
+  <div class="tab-item">
+    <span class="icon-close-tab"></span>
+    Tab 3
+  </div>
+  <div class="tab-item tab-item-fixed btn btn-add-tab"></div>
+</div>
+```
+
+### JavaScript
+
+#### Methods
+
+##### addTab
+
+```javascript
+var myTabGroup = document.getElementsByClassName("tab-group")[0];
+
+//[tabGroup].addTab(options);
+
+var newTabItem = tabGroup1.addTab({
+  position: "last", // "last" || "first" - Position of new element in DOM context. Default is "last"
+  closeBtn: true, // If the new tab-item has a close btn. Default is true
+  isActive: true, // If the new tab-item is the active one. Default is true
+  animated: true, // If the adding process has a smooth animation. Default is true
+  content: document.createTextNode("UI") // Can be a string or a element node. Default is "New Tab"
+});
+
+return newTabItem; // Returns the new tab-item element
+```
+
+##### closeTab
+
+```javascript
+var myTabGroup = document.getElementsByClassName("tab-group")[0];
+
+//[tabGroup].closeTab([tabItem], [options]);
+
+myTabGroup.closeTab(myTabGroup.children[0], {
+  animated: false
+});
+// Closes the first tab item
+```
+
+
+##### activateItem
+
+```javascript
+var myTabGroup = document.getElementsByClassName("tab-group")[0];
+
+//[tabGroup].activateItem([tabItem]);
+
+myTabGroup.activateItem(myTabGroup.children[0]); // Activates the first tab item
+```
+
+##### moveItem
+
+```javascript
+var myTabGroup = document.getElementsByClassName("tab-group")[0];
+
+//[tabGroup].moveItem(tabItemElement, newDOMPosition);
+
+myTabGroup.moveItem(myTabGroup.children[2], 4); // Moves the 3rd tab-item ([2]) to position 4 in DOM context
+```
+
+#### Events
+
+##### tabActivate
+
+```javascript
+var myTabGroup = document.getElementsByClassName("tab-group")[0];
+
+myTabGroup.addEventListener("tabActivate", function(event) {
+  event.detail;     // Event informations
+  event.detail.tab; // The activated tab-item
+  event.detail.tabPosition; // The activated tab-item position
+  console.log("Tab activate Event", event.detail);
+}, false);
+```
+##### positionChange
+
+```javascript
+var myTabGroup = document.getElementsByClassName("tab-group")[0];
+
+myTabGroup.addEventListener("positionChange", function(event) {
+  event.detail; // Event informations
+  event.detail.tab; // The tab-item who's position has changed
+  event.detail.tabPositionBefore; // The original position of the moved tab-item
+  event.detail.tabPositionNew; // The new position of the moved tab-item
+  console.log("Tab postion change Event", event.detail);
+}, false);
+```
+
+##### tabDrag
+
+```javascript
+var myTabGroup = document.getElementsByClassName("tab-group")[0];
+
+myTabGroup.addEventListener("tabDrag", function(event) {
+  event.detail; // Event informations
+  event.detail.tab; // The dragged tab-item
+  event.detail.tabPosition; // The position of the dragged tab-item
+  event.detail.drag; // The drag on the x-axis in pixels
+  console.log("Tab drag Event", event.detail);
+}, false);
+```
+
+## Progress bar
+
+Blink (therefore electron) offers a progress bar but there are two problems:
+1. On retina displays, the progress bar is blurry
+2. The indeterminate progress bar (no "value" attribute) isn't animated like a real native one.
+
+This problems will be fixed with the following component:
+
+Fiddle: https://jsfiddle.net/g17f3axy/
+
+![Determinate Progress Bar](https://picload.org/image/rdpiggwl/bildschirmfoto2016-11-12um18.1.png)
+![Indeterminate Progress Bar](http://dev.amina-koyim.de/data/1e1ijx.gif)
+
+### HEAD
+```html
+...
+  <link rel="stylesheet" href="path/to/photon.css" />
+  <link rel="stylesheet" href="path/to/progress.css" />
+...
+```
+
+### BODY
+
+#### Determinate Progress Bar
+```html
+<progress value="50" max="100"></progress>
+```
+![Determinate Progress Bar](https://picload.org/image/rdpiggwl/bildschirmfoto2016-11-12um18.1.png)
+
+#### Indeterminate Progress Bar
+In difference to the default version of blink, this one is animated.
+```html
+<progress></progress>
+```
+![Indeterminate Progress Bar](http://dev.amina-koyim.de/data/1e1ijx.gif)
+
+## Circle Progress
+
+![Circle Progress](https://picload.org/image/rdpcplow/bildschirmfoto2016-11-12um15.3.png)
+
+Fiddle: https://jsfiddle.net/rfzLan1k/
+
+### HEAD
+```html
+...
+  <link rel="stylesheet" href="path/to/photon.css" />
+  <link rel="stylesheet" href="path/to/progress-circle.css" />
+  <script type="text/javascript" src="path/to/progress-circle.js"></script>
+...
+```
+
+### BODY
+#### Default
+```html
+<div class="progress-circle"></div>
+```
+#### Custom Size
+Just change the width and height properties.
+```html
+<div class="progress-circle" style="width: 50px; height: 50px;"></div>
+```
+
+### JavaScript
+
+#### Get Progress
+
+```javascript
+var myElement = document.getElementsByClassName("progress-circle")[0];
+
+return myElement.progress; // Returns the progress (0 - 100);
+```
+
+#### Set Progress
+
+```javascript
+var myElement = document.getElementsByClassName("progress-circle")[0];
+
+myElement.updateCircleProgress(50); // 50%
+```

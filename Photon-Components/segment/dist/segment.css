@@ -1,0 +1,88 @@
+.btn-group .btn.btn-segment {
+  outline: none;
+  padding: 0px 12px 0px 12px;
+  border: 1px solid #d5d5d5;
+  font-weight: 400;
+  background-color: #fff;
+  letter-spacing: 0.4px;
+  height: 21px;
+  border-top: 1px solid rgb(205, 205, 205);
+  border-bottom: 1px solid rgb(174, 174, 174);
+  box-sizing: border-box;
+}
+.btn-group .btn.btn-segment:first-child {
+  border-radius: 4.5px 0px 0px 4.5px;
+  border-left-color: rgb(205, 205, 205);
+}
+.btn-group .btn.btn-segment:last-child {
+  border-radius: 0px 4.5px 4.5px 0px;
+  border-right: 1px solid rgb(205, 205, 205);
+}
+.btn-group:hover .btn-segment:active {
+  background-color: #f0f0f0;
+}
+.btn-group:hover .btn-segment.active:active {
+  background-image: linear-gradient(to bottom, rgb(74, 152, 253), rgb(7, 102, 227)) !important;
+  border-top-color: rgb(35, 127, 254) !important;
+  border-bottom-color: rgb(3, 63, 221) !important;
+}
+.btn-group .btn.btn-segment.active {
+  border-right: none;
+
+}
+.btn-group .btn.btn-segment.active {
+  border-top-color: rgb(73, 160, 249);
+  border-bottom-color: rgb(5, 95, 255);
+  background-image: linear-gradient(to bottom, rgb(105, 180, 250), rgb(13, 128, 255));
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+.btn-group .btn-segment.active:last-child {
+  border-right: 1px solid rgb(73, 160, 249);
+}
+.btn-group .btn-segment.active:first-child {
+  border-left-color: rgb(73, 160, 249);
+}
+.btn-group .btn-segment.active + .btn-segment {
+  border-left: none !important;
+}
+.btn-group.fill-width {
+  display: inline-flex;
+}
+.btn-group.fill-width .btn {
+  flex: 1;
+}
+
+@media only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2) {
+  .btn-group .btn.btn-segment, .btn-group .btn.btn-segment:first-child, .btn-group .btn.btn-segment:last-child {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    padding: 0px 13px 0px 13px;
+  }
+  .btn-group .btn.btn-segment {
+    box-shadow: inset 0px 0px 0px 0.5px rgb(190, 190, 190);
+  }
+  .btn-group {
+    box-shadow: inset 0px 0px 0px 0.5px rgb(30, 130, 253);
+    border-radius: 4.5px;
+  }
+  .btn-group .btn.btn-segment.active {
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    padding: 0px 12px;
+    box-shadow: inset 0px 0px 0px 0.5px rgb(30, 130, 253);
+
+  }
+  .btn-group .btn.btn-segment.active:first-child + .btn.btn-segment.active:last-child {
+    box-shadow: inset -0.5px 0px 0px 0.5px rgb(30, 130, 253);
+  }
+
+}
