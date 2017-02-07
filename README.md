@@ -2,11 +2,22 @@
 
 Some components for the PhtonKit Framework to build native UI's in CSS/JS.
 
+Please make sure, that maybe the JSFiddle doesn't looks like expected if you use another engine as blink.
+For some components there is no JSFiddle because they need some native features.
+
+**The best idea is to test everything directly in electron**
+
+Within the _Photon-Components_ folder, every component directory is a valid electron app. You can directly run it with electron.
+
+The most components have a integrated documentation.
+
+Or, if you want to test everything run _electron_ for the _ShowReal_ folder
+
 ## Native Button
 
 PhotonKit doesn't offers a real native looking button solution for the default button in macOS. Of course there is a button named "btn-primary", that has a blue background and another one called "btn-default" thats background-color is grey, but they are not perfect. This component contains a better, more native looking button component with the class "btn btn-system".
 
-Fiddle: https://jsfiddle.net/cw7335h9/
+Fiddle: https://jsfiddle.net/h9utzeLo/
 
 ![Native Button on normal displays](http://s18.postimg.org/y43j4x61l/Bildschirmfoto_2016_09_26_um_19_23_22.png)
 ![Native Button on retina displays (pixel-ratio=2)](http://s22.postimg.org/457yfv2bl/Bildschirmfoto_2016_09_26_um_19_23_06.png)
@@ -31,8 +42,6 @@ Fiddle: https://jsfiddle.net/cw7335h9/
 
 This component is used for a dialog in the window.
 Dialog containers are located in the "window-dialogs" element within the "window" element below the "toolbar toolbar-header" element.
-
-Fiddle: https://jsfiddle.net/o0hqvppu/
 
 ![Dialog](http://s3.postimg.org/5athwvbkz/Bildschirmfoto_2016_09_26_um_21_00_12.png)
 
@@ -95,7 +104,7 @@ The segmented control is based on the layout for a "btn-group". In addition ther
 
 The attribute "data-group-relationship" set the relationship between the buttons within the btn-group. If this attribute is "relative" every button can be activated or deactivated. If the attribute is "absolute" there is always one active element. If you activate some, the current active one will be disactived. By default data-group-relationship is "relative".
 
-Fiddle: https://jsfiddle.net/wc2h5cp4/
+Fiddle: https://jsfiddle.net/qpzft67s/
 
 ![Segmented Control](http://s17.postimg.org/niwj0s50f/Bildschirmfoto_2016_09_26_um_21_18_15.png)
 
@@ -154,7 +163,7 @@ myBtnGroup.addEventListener("activate", function() {
 
 ## Slider
 
-Fiddle: https://jsfiddle.net/pq9kny07/
+Fiddle: https://jsfiddle.net/yxacffxu/
 
 
 ![Sliders](https://picload.org/image/rdipoppp/bildschirmfoto2016-11-06um21.1.png)
@@ -219,6 +228,8 @@ Fiddle: https://jsfiddle.net/pq9kny07/
 The swipe elements are smart action buttons, that appear if you swipe on the trackpad or magic mouse over an list-group-item.
 
 ![Swipe Items](https://picload.org/image/rdiplpgl/bildschirmfoto2016-11-06um22.0.png)
+
+Fiddle is **not** available because some _native_ features are required.
 
 ### HEAD
 
@@ -394,7 +405,7 @@ In this component the items aren't really different. The syntax is same, there i
 
 The new CSS file "tabs-custom" manages the new classes and give us also a more native looking close button for the tab items because the original from PhotonKit was ugly.
 
-https://jsfiddle.net/5qo1d5dn/
+Fiddle: https://jsfiddle.net/arxqm737/
 
 ![Tab Group](https://picload.org/image/rdiplwla/bildschirmfoto2016-11-06um22.1.png)
 
@@ -539,7 +550,7 @@ Blink (therefore electron) offers a progress bar but there are two problems:
 
 This problems will be fixed with the following component:
 
-Fiddle: https://jsfiddle.net/g17f3axy/
+Fiddle: https://jsfiddle.net/yy5jfyd0/
 
 ![Determinate Progress Bar](https://picload.org/image/rdpiggwl/bildschirmfoto2016-11-12um18.1.png)
 ![Indeterminate Progress Bar](http://dev.amina-koyim.de/data/1e1ijx.gif)
@@ -571,7 +582,7 @@ In difference to the default version of blink, this one is animated.
 
 ![Circle Progress](https://picload.org/image/rdpcplow/bildschirmfoto2016-11-12um15.3.png)
 
-Fiddle: https://jsfiddle.net/rfzLan1k/
+Fiddle: https://jsfiddle.net/Lq7g79fq/
 
 ### HEAD
 ```html
@@ -610,3 +621,83 @@ var myElement = document.getElementsByClassName("progress-circle")[0];
 
 myElement.updateCircleProgress(50); // 50%
 ```
+
+## Frame List & Border
+
+![Frame List](https://picload.org/image/roigwaoi/bildschirmfoto2017-02-07um19.2.png)
+
+Fiddle: https://jsfiddle.net/8t2s6v3f/
+
+### HEAD
+```html
+...
+  <link rel="stylesheet" href="path/to/photon.css" />
+  <link rel="stylesheet" href="path/to/frame-list.css" />
+  <script type="text/javascript" src="path/to/frame-list.js"></script>
+...
+```
+
+### BODY
+
+#### Layout
+
+```html
+<div class="content-frame" style="height: 300px;">
+  <div class="frame-inner">
+    ...
+  </div>
+  <div class="toolbar">
+    <!--Toolbar is optional-->
+    <button class="btn btn-add"></button>
+    <button class="btn btn-remove" disabled></button>
+  </div>
+</div>
+```
+
+##### Frame Inner
+
+```html
+<div class="content-frame" style="height: 300px;">
+  <div class="frame-inner">
+    <ul class="list-select list-editable">
+      <li class="active" draggable="true">
+        <details>
+          <summary>Apple</summary>
+          <ul>
+            <li>
+              Test
+            </li>
+            <li>Einfarbig</li>
+          </ul>
+        </details>
+      </li>
+      <li draggable="true">
+        <span>Fotos</span>
+      </li>
+      <li draggable="true">
+        <span>Ordner</span>
+      </li>
+    </ul>
+  </div>
+  <div class="toolbar">
+    ...<!--Toolbar is optional-->
+  </div>
+</div>
+```
+
+#### Main Border
+
+```html
+<div class="window-content theme-gray">
+  <!--window-content div should have the class 'theme-gray'. Otherwise it looks not good-->
+  <div class="main-border">
+    Main Border Content
+  </div>
+</div>
+```
+
+## Messages
+
+![Messages](https://picload.org/image/roigwlgr/bildschirmfoto2017-02-07um19.4.png)
+
+Fiddle: https://jsfiddle.net/q62Lg11z/
