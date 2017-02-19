@@ -23,7 +23,7 @@ app.on('ready', function() {
   // Create the browser window.
   mainWindow = new BrowserWindow({
     width: 800,
-    height: 500,
+    height: 565,
     titleBarStyle: "hidden",
     "web-preferences": {
       "web-security": false

@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../Photon-Components/progress-bar/dist/progress.css">
     <link rel="stylesheet" href="../Photon-Components/progress-circle/dist/progress-circle.css">
     <link rel="stylesheet" href="../Photon-Components/messages/dist/messages.css">
+    <link rel="stylesheet" href="../Photon-Components/circular-slider/dist/circular-slider.css">
     <script type="text/javascript" src="../Photon-Components/tab/dist/tabs.js"></script>
     <script type="text/javascript" src="../Photon-Components/segment/dist/segment.js"></script>
     <script type="text/javascript" src="../Photon-Components/swipe/dist/swipe.js"></script>
@@ -22,6 +23,7 @@
     <script type="text/javascript" src="../Photon-Components/slider/dist/range.js"></script>
     <script type="text/javascript" src="../Photon-Components/progress-circle/dist/progress-circle.js"></script>
     <script type="text/javascript" src="../Photon-Components/messages/dist/messages.js"></script>
+    <script type="text/javascript" src="../Photon-Components/circular-slider/dist/circular-slider.js"></script>
     <title>Show Real Photon</title>
     <script type="text/javascript">
       window.addEventListener("load", function() {
@@ -254,16 +256,26 @@
             </div>
             <br /><br />
             <input type="text" value="Text">
-            <br /><br />
+            <br />
+            <input type="number" value="10">
+            <div class="stepper">
+              <button></button>
+              <button></button>
+            </div>
+            <br><br>
             <input type="range" class="slider slider-round blue" style="width: 200px;">
-            <br />
+            <br>
             <input type="range" class="slider slider-square" style="width: 200px; margin-top: 15px;">
-            <br />
+            <br>
             <input type="range" class="slider slider-square-inverted" style="width: 200px; margin-top: 15px;">
-            <br /><br />
+            <br><br>
+            <div class="circular-slider">
+              <div class="dot"></div>
+            </div>
+            <br><br>
             <button class="btn btn-system">Cancel</button>
             <button class="btn btn-system btn-active">Button</button>
-            <br /><br />
+            <br><br>
             <progress class="progress" value="50" max="100" style="width: 200px;"></progress>
             <br />
             <progress class="progress" style="width: 200px;"></progress>

@@ -8,11 +8,12 @@ div:not(.tool-bar) > input:not([type="range"]):not([type="color"]) {
   border: 1px solid #dbdbdb;
   margin: 5px;
   cursor: text;
+  -webkit-app-region: no-drag;
 }
 div:not(.tool-bar) > input:not([type="range"]):not([type="color"]):focus {
   border: 1px solid rgba(159, 204, 250, 1);
   border-radius: 1px;
-  box-shadow: 0px 0px 0px 4px rgba(159, 204, 250, 1);
+  box-shadow: 0px 0px 0px 3.5px rgba(159, 204, 250, 1);
   animation: showFocus .3s;
 }
 @keyframes showFocus {
@@ -26,7 +27,7 @@ div:not(.tool-bar) > input:not([type="range"]):not([type="color"]):focus {
   100% {
     border: 1px solid #dbdbdb;
     border-radius: 1px;
-    box-shadow: 0px 0px 0px 4px rgba(159, 204, 250, 1);
+    box-shadow: 0px 0px 0px 3.5px rgba(159, 204, 250, 1);
     /*outline: 4px solid rgba(159, 204, 250, 1);
     outline-offset: -1px;*/
   }
@@ -38,7 +39,6 @@ div:not(.tool-bar) > .toolbar input:not([type="range"]):not([type="color"]) {
   padding: 11px 6px 11px 6px;
   border-radius: 4px;
   border-color: #c2c2c2;
-  margin: 0px 0px 3px 0px;
 }
 div:not(.tool-bar) > .toolbar input:not([type="range"]):not([type="color"]):focus {
   border-color: #9fccfa;
@@ -66,4 +66,93 @@ div:not(.tool-bar) > input[type="search"]::-webkit-input-placeholder {
 }
 div:not(.tool-bar) > input[type="search"]:focus::-webkit-input-placeholder {
   /*text-align: left;*/
+}
+input[type='number'] {
+  width: 75px;
+}
+input[type='number']::-webkit-inner-spin-button, input[type='number']::-webkit-outer-spin-button {
+  transform: translate(27px, 0px) scale(1.5);
+  opacity: 1;
+  display: none;
+  background-color: red !important;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 20 20"><circle cx="5px" cy="5px" r="10px"/></svg>');
+}
+input[type='number']::-webkit-inner-spin-button {
+
+}
+
+.stepper {
+  margin: 0px 3px 0px 0px;
+  font-size: 0;
+  height: 20px;
+  width: 13px;
+  box-sizing: border-box;
+  border: 1px solid rgb(202, 202, 202);
+  border-radius: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fff;
+}
+input + .stepper {
+  margin-top: -1px;
+}
+.stepper button {
+  padding: 0;
+  border: none;
+  width: 100%;
+  height: 50%;
+  background-color: transparent;
+  outline: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
+}
+.stepper button:active {
+  z-index: 1;
+}
+.stepper button:nth-child(1) {
+  border-radius: 5px 5px 0px 0px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100"><line x1="25px" y1="65px" x2="50px" y2="45px" style="stroke: #333; stroke-width: 15px; stroke-linecap: round;"/><line x1="75px" y1="65px" x2="50px" y2="45px" style="stroke: #333; stroke-width: 15px; stroke-linecap: round;"/></svg>');
+}
+.stepper button:nth-child(2) {
+  border-radius: 0px 0px 5px 5px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100"><line x1="25px" y1="35px" x2="50px" y2="55px" style="stroke: #333; stroke-width: 15px; stroke-linecap: round;"/><line x1="75px" y1="35px" x2="50px" y2="55px" style="stroke: #333; stroke-width: 15px; stroke-linecap: round;"/></svg>');
+}
+.stepper button:nth-child(1):active {
+  box-shadow: 0px 0px 0px 1px rgb(39, 122, 252);
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100"><line x1="25px" y1="65px" x2="50px" y2="45px" style="stroke: #fff; stroke-width: 15px; stroke-linecap: round;"/><line x1="75px" y1="65px" x2="50px" y2="45px" style="stroke: #fff; stroke-width: 15px; stroke-linecap: round;"/></svg>'),
+                    linear-gradient(rgb(76, 154, 255), rgb(41, 129, 246));
+}
+.stepper button:nth-child(2):active {
+  box-shadow: 0px 0px 0px 1px rgb(8, 80, 234);
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100"><line x1="25px" y1="35px" x2="50px" y2="55px" style="stroke: #fff; stroke-width: 15px; stroke-linecap: round;"/><line x1="75px" y1="35px" x2="50px" y2="55px" style="stroke: #fff; stroke-width: 15px; stroke-linecap: round;"/></svg>'),
+                    linear-gradient(rgb(38, 127, 247), rgb(7, 102, 233));
+}
+
+@media only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2) {
+  .stepper {
+    border: 1px solid rgb(202, 202, 202);
+    border: none;
+    box-shadow: 0px 0px 0px 0.5px rgb(189, 189, 189);
+    width: 12px;
+  }
+  .stepper button:nth-child(1) {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100"><line x1="25px" y1="65px" x2="50px" y2="45px" style="stroke: #222; stroke-width: 12px; stroke-linecap: round;"/><line x1="75px" y1="65px" x2="50px" y2="45px" style="stroke: #222; stroke-width: 12px; stroke-linecap: round;"/></svg>');
+  }
+  .stepper button:nth-child(2) {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100"><line x1="25px" y1="35px" x2="50px" y2="55px" style="stroke: #222; stroke-width: 12px; stroke-linecap: round;"/><line x1="75px" y1="35px" x2="50px" y2="55px" style="stroke: #222; stroke-width: 12px; stroke-linecap: round;"/></svg>');
+  }
+  .stepper button:nth-child(1):active {
+    box-shadow: 0px 0px 0px 0.5px rgb(39, 122, 252);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100"><line x1="25px" y1="65px" x2="50px" y2="45px" style="stroke: #fff; stroke-width: 12px; stroke-linecap: round;"/><line x1="75px" y1="65px" x2="50px" y2="45px" style="stroke: #fff; stroke-width: 12px; stroke-linecap: round;"/></svg>'),
+                      linear-gradient(rgb(76, 154, 255), rgb(41, 129, 246));
+  }
+  .stepper button:nth-child(2):active {
+    box-shadow: 0px 0px 0px 0.5px rgb(8, 80, 234);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100"><line x1="25px" y1="35px" x2="50px" y2="55px" style="stroke: #fff; stroke-width: 12px; stroke-linecap: round;"/><line x1="75px" y1="35px" x2="50px" y2="55px" style="stroke: #fff; stroke-width: 12px; stroke-linecap: round;"/></svg>'),
+                      linear-gradient(rgb(38, 127, 247), rgb(7, 102, 233));
+  }
 }

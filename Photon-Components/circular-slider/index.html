@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>OS X Range</title>
+    <link rel="stylesheet" href="dist/circular-slider.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/photon.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/tomorrow-night-eighties.css">
+    <script src="js/highlight.min.js"></script>
+    <script type="text/javascript" src="dist/circular-slider.js"></script>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+    </script>
+    <style media="screen">
+    .code-main {
+      width: 600px;
+      margin-left: calc(50% - 300px);
+      margin-top: 5px;
+    }
+    code, pre {
+      border-radius: 4px;
+      user-select: all;
+      -moz-user-select: all;
+      -webkit-user-select: all;
+      margin: 0px;
+    }
+    pre {
+      padding: 0px;
+    }
+    code::selection, pre::selection {
+      background-color: #333;
+    }
+    h4 {
+      margin-top: 0px;
+      padding: 0px;
+      text-align: left;
+    }
+    .segment-example-target {
+      margin: 10px;
+      width: auto;
+      display: block;
+      padding: 10px;
+      border: 1px solid #666;
+      background-color: #343434;
+      color: #fff;
+      width: 100px;
+      text-align: center;
+    }
+    </style>
+    <script type="text/javascript">
+      window.addEventListener("load", function() {
+        var circSlider = document.getElementsByClassName("circular-slider")[0];
+        circSlider.addEventListener("change", function(event) {
+          console.log(this.value);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="window">
+      <header class="toolbar toolbar-header" style="-webkit-app-region: drag;">
+        <h1 class="title">Circular Slider</h1>
+      </header>
+      <div class="window-content">
+        <div class="code-main">
+          <div class="circular-slider">
+            <div class="dot"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

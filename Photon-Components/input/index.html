@@ -5,23 +5,65 @@
     <title>Input Fields</title>
     <link rel="stylesheet" href="dist/input.css" />
     <link rel="stylesheet" href="css/photon.css" />
+    <script type="text/javascript" src="dist/input.js"></script>
+    <link rel="stylesheet" href="css/tomorrow-night-eighties.css">
+    <script src="js/highlight.min.js"></script>
     <style media="screen">
       .window-content {
         padding: 10px;
       }
+      .code-main {
+        width: 600px;
+        margin-left: calc(50% - 300px);
+        margin-top: 5px;
+      }
+      code, pre {
+        border-radius: 4px;
+        user-select: all;+
+        -moz-user-select: all;
+        -webkit-user-select: all;
+        margin: 0px;
+      }
     </style>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+    </script>
   </head>
   <body>
     <div class="window">
       <header class="toolbar toolbar-header" style="-webkit-app-region: drag;">
         <h1 class="title">Inputs</h1>
         <div class="btn-action">
-          <input type="number">
           <input type="search" class="pull-right" placeholder="Search" length="50">
         </div>
       </header>
       <div class="window-content">
-        <input type="text">
+        <div class="code-main">
+          <h2>Required</h2>
+          <pre>
+            <code class="html">&#x3c;head&#x3e;
+  ...
+  &#x3c;link rel="stylesheet" href="input.css"&#x3e;
+  ...
+&#x3c;/head&#x3e;</code>
+          </pre>
+          <h3>Inputs</h3>
+          <pre>
+            <code class="html">
+  &#x3c;input type="text"&#x3e;
+  &#x3c;input type="number"&#x3e;
+            </code>
+          </pre>
+          <span>Text Field</span>
+          <input type="text">
+          <br />
+          <span>Text Field with stepper</span>
+          <input type="number">
+          <div class="stepper">
+            <button></button>
+            <button></button>
+          </div>
+        </div>
       </div>
     </div>
   </body>
