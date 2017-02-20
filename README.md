@@ -38,50 +38,10 @@ Fiddle: https://jsfiddle.net/1jmro304/
 ...
 ```
 
-## Dialog
+## Input
 
-This component is used for a dialog in the window.
-Dialog containers are located in the "window-dialogs" element within the "window" element below the "toolbar toolbar-header" element.
+This component is just CSS for native looking input fields and so on.
 
-![Dialog](http://s3.postimg.org/5athwvbkz/Bildschirmfoto_2016_09_26_um_21_00_12.png)
-
-### Head
-```html
-...
-  <link rel="stylesheet" href="path/to/photon.css" />
-  <link rel="stylesheet" href="path/to/dialog.css" />
-  <script src="path/to/dialog.js" type="text/javascript"></script>
-...
-```
-
-### Body
-
-#### Main Element
-```html
-...
-<div class="window">
-  ...
-  <div class="window-dialogs">
-    ...
-  </div>
-  ...
-</div>
-...
-```
-
-#### Dialog
-
-```html
-...
-<div class="window-dialogs">
-  ...
-  <div class="dialog">
-    This is the context of the dialog.
-  </div>
-  ...
-</div>
-...
-```
 
 ### JavaScript Controlling
 
