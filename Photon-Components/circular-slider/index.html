@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>OS X Range</title>
-    <link rel="stylesheet" href="dist/circular-slider.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="dist/circular-slider.css">
     <link rel="stylesheet" href="css/photon.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="css/tomorrow-night-eighties.css">
     <script src="js/highlight.min.js"></script>
@@ -52,7 +52,7 @@
       window.addEventListener("load", function() {
         var circSlider = document.getElementsByClassName("circular-slider")[0];
         circSlider.addEventListener("change", function(event) {
-          console.log(this.value);
+
         });
       });
     </script>
@@ -64,9 +64,49 @@
       </header>
       <div class="window-content">
         <div class="code-main">
+          <h2>Head</h2>
+          <pre>
+            <code class="html">&#x3c;head&#x3e;
+  ...
+  &#x3c;link rel="stylesheet" href="circular-slider.css"&#x3e;
+  &#x3c;script type="text/javascript" src="circular-slider.js"&#x3e;&#x3c;/script&#x3e;
+  ...
+&#x3c;/head&#x3e;</code>
+          </pre>
+          <h2>Body</h2>
+          <pre>
+            <code class="html">&#x3c;div class="circular-slider"&#x3e;
+  &#x3c;div class="dot"&#x3e;&#x3c;/div&#x3e;
+&#x3c;/div&#x3e;
+</code>
+          </pre>
+          <span>Circular Slider</span>
+          <br>
           <div class="circular-slider">
             <div class="dot"></div>
           </div>
+          <h2>JavaScript API</h2>
+          <h3>Get Value</h3>
+          <pre>
+            <code class="javascript">var circSlider = document.getElementsByClassName("circular-slider")[0];
+
+circSlider.value; // Returns an angle (0 - 400)</code>
+          </pre>
+          <h3>Set Value</h3>
+          <pre>
+            <code class="javascript">var circSlider = document.getElementsByClassName("circular-slider")[0];
+
+var val = 200;
+circSlider.setValue(val); // Angle from 0 - 400</code>
+          </pre>
+          <h3>Event 'change'</h3>
+          <pre>
+            <code class="javascript">var circSlider = document.getElementsByClassName("circular-slider")[0];
+
+circSlider.addEventListener("change", function(event) {
+  return event; // Change Event
+});</code>
+          </pre>
         </div>
       </div>
     </div>

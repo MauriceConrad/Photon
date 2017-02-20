@@ -53,7 +53,7 @@ input[type="search"] {
   background-position: 5px center;
   text-align: center;
   text-indent: 12px;
-  border-radius: 10px;
+  border-radius: 4px !important;
 }
 input[type="search"]:focus {
   text-align: left;

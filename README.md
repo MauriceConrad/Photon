@@ -661,3 +661,57 @@ Fiddle: https://jsfiddle.net/8t2s6v3f/
 ![Messages](https://picload.org/image/roigwlgr/bildschirmfoto2017-02-07um19.4.png)
 
 Fiddle: https://jsfiddle.net/q62Lg11z/
+
+
+## Circular Slider
+
+Circular Slider for setting angles.
+
+ ![Circular Slider](https://picload.org/image/rlgipllr/screenshot2017-02-20at20.19.16.png)
+
+### Required
+
+```html
+<head>
+  ...
+    <link rel="stylesheet" href="circular-slider.css">
+    <script type="text/javascript" src="circular-slider.js"></script>
+  ...
+</head>
+```
+
+### Body
+
+```html
+<div class="circular-slider">
+  <div class="dot"></div>
+</div>
+```
+
+### JavaScript API
+
+#### Get Value
+
+```javascript
+var circSlider = document.getElementsByClassName("circular-slider")[0];
+
+return circSlider.value; // Returns an angle from 0 - 400
+```
+
+#### Set Value
+
+```javascript
+var circSlider = document.getElementsByClassName("circular-slider")[0];
+
+circSlider.setValue(200); // Angle from 0 - 400
+```
+
+#### Event 'change'
+
+```javascript
+var circSlider = document.getElementsByClassName("circular-slider")[0];
+
+circSlider.addEventListener("change", function(event) {
+  return event; // Change Event
+});
+```

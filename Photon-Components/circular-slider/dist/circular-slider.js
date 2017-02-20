@@ -35,9 +35,9 @@
   HTMLDivElement.prototype.setValue = function(angle) {
     if (this.classList.contains("circular-slider")) {
       var deg = 360 / 400 * angle;
-      var dot = activeCircular.getElementsByClassName("dot")[0];
+      var dot = this.getElementsByClassName("dot")[0];
       if (dot) dot.style.transform = 'translate(0px, -140%) rotate(' + deg + 'deg)';
-      activeCircular.value = angle;
+      this.value = angle;
     }
   }
 
