@@ -667,7 +667,9 @@ Fiddle: https://jsfiddle.net/q62Lg11z/
 
 Circular Slider for setting angles.
 
- ![Circular Slider](https://picload.org/image/rlgipllr/screenshot2017-02-20at20.19.16.png)
+![Circular Slider](https://picload.org/image/rlgipllr/screenshot2017-02-20at20.19.16.png)
+
+Fiddle: https://jsfiddle.net/qs03th34/
 
 ### Required
 
