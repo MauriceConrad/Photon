@@ -365,7 +365,7 @@ In this component the items aren't really different. The syntax is same, there i
 
 The new CSS file "tabs-custom" manages the new classes and give us also a more native looking close button for the tab items because the original from PhotonKit was ugly.
 
-Fiddle: https://jsfiddle.net/arxqm737/
+Fiddle: https://jsfiddle.net/Loo3pyuo/
 
 ![Tab Group](https://picload.org/image/rdiplwla/bildschirmfoto2016-11-06um22.1.png)
 
