@@ -131,7 +131,7 @@
     }
   });
   HTMLDivElement.prototype.activateItem = function(item) {
-    var isTabGroup = hasParentClass(event.target, "tab-group");
+    var isTabGroup = hasParentClass(this, "tab-group");
     if (isTabGroup.success) {
       var group = isTabGroup.parents[isTabGroup.parents.length - 1];
       var currActive = group.getElementsByClassName("active")[0];
@@ -163,7 +163,7 @@
     if (posBefore != index) this.dispatchEvent(tabPosEvent);
   }
   HTMLDivElement.prototype.addTab = function(options) {
-    var isTabGroup = hasParentClass(event.target, "tab-group");
+    var isTabGroup = hasParentClass(this, "tab-group");
     if (isTabGroup.success) {
       var group = isTabGroup.parents[isTabGroup.parents.length - 1];
       var opts = options.fillDefaults({
@@ -212,7 +212,7 @@
     }
   }
   HTMLDivElement.prototype.closeTab = function(item, options) {
-    var isTabGroup = hasParentClass(event.target, "tab-group");
+    var isTabGroup = hasParentClass(this, "tab-group");
     if (isTabGroup.success) {
       var group = isTabGroup.parents[isTabGroup.parents.length - 1];
       var opts = options.fillDefaults({
