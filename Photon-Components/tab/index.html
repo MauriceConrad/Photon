@@ -59,7 +59,7 @@
           console.log("Tab Position Change Event", event.detail);
         }, false);
         tabGroup1.addEventListener("tabDrag", function(event) {
-          //console.log("Tab Drag Event", event.detail);
+          console.log("Tab Drag Event", event.detail);
         }, false);
         tabGroup1.addEventListener("add", function(event) {
           console.log("Tab Add Event", event.detail);
@@ -107,7 +107,11 @@
           <span class="icon-close-tab"></span>
           Tab 3
         </div>
+        <div class="tab-item tab-item-fixed">
+          Fixed 2
+        </div>
         <div class="tab-item tab-item-fixed btn btn-add-tab"></div>
+
       </div>
       <div class="window-content">
         <div class="window-content">

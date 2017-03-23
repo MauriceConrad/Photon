@@ -14,6 +14,9 @@
   margin-top: -1px;
   border-right: 1px solid #989698;
   margin-right: -1px;
+  transition-property: left;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
 }
 .tab-item:first-child {
   border-left: 1px solid #989698;
@@ -80,19 +83,15 @@
 
 
 
-.tab-item {
-  transition-property: none;
-  transition-duration: .3s;
-}
-.in-drag .tab-item, .tab-item.active:not(.dragging) {
-  transition-property: transform;
-  transition-timing-function: ease-out;
-}
 
-.tab-item.active {
-  z-index: 1;
-}
+
 .tab-item.dragging {
+  flex: none;
+  z-index: 1;
+  position: relative;
+}
+.tab-item.dragging.active {
+  z-index: 2;
   transition-property: none;
 }
 
@@ -104,8 +103,9 @@
 .tab-item.adding {
   flex: none;
   width: 0px;
-  padding: normal 0px;
-  transition-property: width !important;
+  padding-left: none;
+  padding-right: none;
+  transition: width 0.4s;
   overflow: hidden;
   max-height: 23px;
 }
