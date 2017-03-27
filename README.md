@@ -15,18 +15,18 @@ Or, if you want to test everything run _electron_ for the _ShowReal_ folder
 
 ## Documentation
 
-[Native Button](#native-button)
-[Input](#input)
-[Dialog](#dialog)
-[Segmented Control](#segmented-control--btn-group-controller)
-[Slider](#slider)
-[Swipe](#swipe)
-[Tab Group](#tab-group)
-[Progress Bar](#progress-bar)
-[Progress Circle](#circle-progress)
-[Frame List & Main Border](#frame-list--border)
-[Messages](#messages)
-[Circular Slider](#circular-slider)
+[Native Button](#native-button)<br>
+[Input](#input)<br>
+[Dialog](#dialog)<br>
+[Segmented Control](#segmented-control--btn-group-controller)<br>
+[Slider](#slider)<br>
+[Swipe](#swipe)<br>
+[Tab Group](#tab-group)<br>
+[Progress Bar](#progress-bar)<br>
+[Progress Circle](#circle-progress)<br>
+[Frame List & Main Border](#frame-list--border)<br>
+[Messages](#messages)<br>
+[Circular Slider](#circular-slider)<br>
 
 ## Native Button
 
