@@ -25,6 +25,7 @@ app.on('ready', function() {
     width: 800,
     height: 565,
     titleBarStyle: "hidden",
+    frame: false,
     //vibrancy: "medium-light",
     "web-preferences": {
       "web-security": false
