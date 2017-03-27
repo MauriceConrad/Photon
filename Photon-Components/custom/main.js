@@ -23,9 +23,8 @@ app.on('ready', function() {
   // Create the browser window.
   mainWindow = new BrowserWindow({
     width: 800,
-    height: 565,
+    height: 500,
     titleBarStyle: "hidden",
-    //vibrancy: "medium-light",
     "web-preferences": {
       "web-security": false
     }
@@ -35,7 +34,7 @@ app.on('ready', function() {
   mainWindow.loadURL('file://' + __dirname + '/index.html');
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  //mainWindow.webContents.openDevTools();
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function() {

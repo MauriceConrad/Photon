@@ -1,14 +1,8 @@
-/*header {
-  z-index: 1;
+header {
+  z-index: 21;
 }
 .window-dialogs {
-  z-index: 0;
-}
-.tab-group {
-
-}
-.window-content {
-  z-index: 0;
+  z-index: 20;
 }
 .window-dialogs .dialog {
   height: auto;
@@ -19,9 +13,14 @@
   background-color: #e9e9e9;
   width: calc(450px);
   left: calc(50% - (450px / 2));
-  box-shadow: 0px 3px 13px rgba(77, 77, 77, 0.49);
   padding: 18px 16px 12px 16px;
-  display: none;
+  transform: translate(0px, calc(-100% - 10px));
+  box-shadow: 0px 3px 13px rgba(77, 77, 77, 0.49);
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+.window-dialogs .dialog.show {
+  transform: translate(0px, 0px);
 }
 .dialog .title {
   color: #000;
@@ -38,22 +37,14 @@
   width: calc(100% - 8px);
   margin-bottom: 12px;
 }
-@keyframes showDialog {
-  from {
-    transform: translate(0px, -100%);
-  }
-  to {
-    transform: translate(0px, 0px);
-  }
-}
-@keyframes hideDialog {
-  from {
-    transform: translate(0px, 0px);
-  }
-  to {
-    transform: translate(0px, -100%);
-  }
-}*/
-.window-dialogs {
+.dialog-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
   display: none;
+}
+.dialog-overlay.show {
+  display: block;
 }

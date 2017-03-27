@@ -13,6 +13,21 @@ The most components have a integrated documentation.
 
 Or, if you want to test everything run _electron_ for the _ShowReal_ folder
 
+## Documentation
+
+[Native Button](#native-button)
+[Input](#input)
+[Dialog](#dialog)
+[Segmented Control](#segmented-control--btn-group-controller)
+[Slider](#slider)
+[Swipe](#swipe)
+[Tab Group](#tab-group)
+[Progress Bar](#progress-bar)
+[Progress Circle](#circle-progress)
+[Frame List & Main Border](#frame-list--border)
+[Messages](#messages)
+[Circular Slider](#circular-slider)
+
 ## Native Button
 
 PhotonKit doesn't offers a real native looking button solution for the default button in macOS. Of course there is a button named "btn-primary", that has a blue background and another one called "btn-default" thats background-color is grey, but they are not perfect. This component contains a better, more native looking button component with the class "btn btn-system".
@@ -42,18 +57,66 @@ Fiddle: https://jsfiddle.net/1jmro304/
 
 This component is just CSS for native looking input fields and so on.
 
+(Documentation in progress)
+
+## Dialog
+Dialog component for simple native looking dialogs.
+
+### Head
+```html
+...
+  <link rel="stylesheet" href="path/to/photon.css" />
+  <link rel="stylesheet" href="path/to/dialog.css" />
+...
+```
+
+### Body
+
+#### Main Structure
+
+```html
+...
+<div class="window">
+  <header class="toolbar toolbar-header">
+    <!--Toolbar Content-->
+  </header>
+  <div class="window-dialogs">
+    <!--Window Dialogs!-->
+  </div>
+  <div class="window-content">
+    <!--Window Content-->
+  </div>
+</div>
+...
+```
+
+#### Dialogs
+
+```html
+...
+<div class="window-dialogs">
+  ...
+  <div class="dialog" id="test-dialog">
+    <h1 class="title left">This a Dialog</h1>
+    <button class="btn btn-default">A Button</button>
+    <br /><br />
+    <button class="btn btn-primary btn-close-dialog">Hide Dialog</button>
+    <!--class "btn-close-dialog" defines that this button closes the dialog-->
+  </div>
+  ...
+</div>
+...
+```
+
 
 ### JavaScript Controlling
 
 ```javascript
-var myDialogElement = document.getElementsByClassName("dialog")[0];
+var myDialog = document.getElementById("test-dialog");
 
-//dialogAction([dialogElement], [options]); //All options are optional
-
-dialogAction(myDialogElement, {
-  action: "auto", // Can be "show", "hide" or "auto" | default: "auto"
-  animation: true, // Set if the dialog shows or hides itself with an animation | default: true
-  animationSpeed: 300 // Set the speed of the animation in ms | default: 300
+dialogAction(myDialog, {
+  action: "auto", // "open" || "close" || "auto". Default is "auto"
+  speed: 0.3 // Animation speed in s. Default is 0.3. (! To disable animation set speed = 0)
 });
 ```
 

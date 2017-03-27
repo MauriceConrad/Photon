@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="../Photon-Components/progress-circle/dist/progress-circle.css">
     <link rel="stylesheet" href="../Photon-Components/messages/dist/messages.css">
     <link rel="stylesheet" href="../Photon-Components/circular-slider/dist/circular-slider.css">
+    <link rel="stylesheet" href="../Photon-Components/custom/dist/custom.css">
+    <script type="text/javascript" src="../Photon-Components/custom/dist/custom.js"></script>
     <script type="text/javascript" src="../Photon-Components/tab/dist/tabs.js"></script>
     <script type="text/javascript" src="../Photon-Components/segment/dist/segment.js"></script>
     <script type="text/javascript" src="../Photon-Components/swipe/dist/swipe.js"></script>
@@ -48,7 +50,7 @@
     </style>
   </head>
   <body>
-    <div class="window">
+    <div class="window vibrancy">
       <header class="toolbar toolbar-header">
         <h1 class="title" style="-webkit-app-region: drag;">Show Real</h1>
         <div class="toolbar-actions" style="text-align: center;">
@@ -83,7 +85,7 @@
       </div>
       <div class="window-content theme-gray">
         <div id="swipe">
-          <div class="pane-group" style="background-color: #fff;">
+          <div class="pane-group">
             <div class="pane-sm sidebar">
               <ul class="list-group">
                 <li class="list-group-item list-item-swipe">
@@ -241,7 +243,7 @@
             </div>
           </div>
         </div>
-        <div id="other" style="display: none;">
+        <div id="other" style="display: none;" class="theme-gray">
           <div class="main-border" style="text-align: center;">
             <div class="btn-group" data-group-relationship="absolute" style="margin-top: -45px">
               <button class="btn btn-segment active">Segment A</button>
@@ -282,7 +284,6 @@
             <br />
             <div class="progress-circle"></div>
           </div>
-
         </div>
       </div>
     </div>

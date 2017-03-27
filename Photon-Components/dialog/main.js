@@ -25,8 +25,8 @@ app.on('ready', function() {
     width: 800,
     height: 500,
     titleBarStyle: "hidden",
-    "web-preferences": {
-      "web-security": false
+    webPreferences: {
+      experimentalFeatures: true
     }
   });
 
@@ -34,7 +34,7 @@ app.on('ready', function() {
   mainWindow.loadURL('file://' + __dirname + '/index.html');
 
   // Open the DevTools.
-  //mainWindow.webContents.openDevTools();
+  mainWindow.webContents.openDevTools();
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function() {

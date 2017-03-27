@@ -5,9 +5,11 @@
     <title>Dialog Example</title>
     <link rel="stylesheet" href="dist/dialog.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="css/photon.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="../custom/dist/custom.css">
     <link rel="stylesheet" href="css/tomorrow-night-eighties.css">
     <script src="js/highlight.min.js"></script>
     <script type="text/javascript" src="dist/dialog.js"></script>
+    <script type="text/javascript" src="../custom/dist/custom.js"></script>
     <script type="text/javascript">
       hljs.initHighlightingOnLoad();
     </script>
@@ -57,16 +59,15 @@
       var actionBtns = document.getElementsByClassName("dialog-action");
       actionBtns[0].addEventListener("click", function() {
         dialogAction(dialog, {
-          action: "auto",
-          animation: true,
-          animationSpeed: 300
+          action: "auto", // "open" || "close" || "auto". Default is "auto"
+          speed: 0.3 // Animation speed in s. Default is 0.3. (! To disable animation set speed = 0)
         });
       }, false);
     }, false);
   </script>
   <body>
-    <div class="window" style="-webkit-app-region: drag;">
-      <header class="toolbar toolbar-header">
+    <div class="window">
+      <header class="toolbar toolbar-header" style="-webkit-app-region: drag;">
         <h1 class="title">Header</h1>
         <div class="toolbar-actions" style="text-align: center">
           <button class="btn btn-default dialog-action">Test the Dialog-Action</button>
@@ -77,7 +78,7 @@
           <h1 class="title left">This a Dialog</h1>
           <button class="btn btn-default">A Button</button>
           <br /><br />
-          <button class="btn btn-primary dialog-action">Hide Dialog</button>
+          <button class="btn btn-primary btn-close-dialog">Hide Dialog</button>
         </div>
       </div>
       <div class="window-content">
