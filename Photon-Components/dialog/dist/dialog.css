@@ -1,5 +1,8 @@
-header {
+.toolbar {
   z-index: 21;
+}
+.tab-group {
+  z-index: 22;
 }
 .window-dialogs {
   z-index: 20;

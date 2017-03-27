@@ -3,6 +3,29 @@
   var sizingPaneBounding = {};
   var sizingStartPos = [0, 0];
   window.addEventListener("mousedown", function(event) {
+    getTargetPane(event, function(pane, bounding) {
+      sizingPane = pane;
+      sizingPaneBounding = bounding;
+      sizingStartPos = [event.pageX, event.pageY];
+    });
+  });
+  window.addEventListener("mousemove", function(event) {
+    var sizings = document.getElementsByClassName("sizing-pane");
+    for (var i = 0; i < sizings.length; i++) {
+      sizings[i].classList.remove("sizing-pane");
+    }
+    var isPaneGroup = event.target.hasParentClass("pane-group");
+    if (isPaneGroup.success) {
+      var group = isPaneGroup.parents[isPaneGroup.parents.length - 1];
+      var panes = group.getElementsByClassName("pane");
+      getTargetPane(event, function(pane, bounding) {
+        for (var i = 0; i < panes.length; i++) {
+          panes[i].classList.add("sizing-pane");
+        }
+      });
+    }
+  });
+  function getTargetPane(event, callback) {
     var isPane = event.target.hasParentClass("pane");
     if (isPane.success == true) {
       var target = isPane.parents[isPane.parents.length - 1];
@@ -12,13 +35,11 @@
         var limiterPos = panePos.right;
         var mouseAcurracy = Math.abs(limiterPos - event.pageX);
         if (mouseAcurracy <= 5 && i < panes.length - 1) {
-          sizingPane = panes[i];
-          sizingPaneBounding = panePos;
-          sizingStartPos = [event.pageX, event.pageY];
+          callback(panes[i], panePos);
         }
       }
     }
-  });
+  }
   window.addEventListener("mouseup", function() {
     sizingPane = false;
   });

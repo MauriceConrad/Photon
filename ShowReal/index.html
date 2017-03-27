@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../Photon-Components/messages/dist/messages.css">
     <link rel="stylesheet" href="../Photon-Components/circular-slider/dist/circular-slider.css">
     <link rel="stylesheet" href="../Photon-Components/custom/dist/custom.css">
+    <link rel="stylesheet" href="../Photon-Components/pane-size/dist/pane-size.css">
     <script type="text/javascript" src="../Photon-Components/custom/dist/custom.js"></script>
     <script type="text/javascript" src="../Photon-Components/tab/dist/tabs.js"></script>
     <script type="text/javascript" src="../Photon-Components/segment/dist/segment.js"></script>
@@ -26,6 +27,7 @@
     <script type="text/javascript" src="../Photon-Components/progress-circle/dist/progress-circle.js"></script>
     <script type="text/javascript" src="../Photon-Components/messages/dist/messages.js"></script>
     <script type="text/javascript" src="../Photon-Components/circular-slider/dist/circular-slider.js"></script>
+    <script type="text/javascript" src="../Photon-Components/pane-size/dist/pane-size.js"></script>
     <title>Show Real Photon</title>
     <script type="text/javascript">
       window.addEventListener("load", function() {
@@ -56,7 +58,7 @@
         <div class="toolbar-actions" style="text-align: center;">
           <div class="btn-group component-groups" data-group-relationship="absolute">
             <button class="btn btn-default active" data-view="#swipe">Swipe</button>
-            <button class="btn btn-default" data-view="#frames">Frame List</button>
+            <button class="btn btn-default" data-view="#frames">Frames & Panes</button>
             <button class="btn btn-default" data-view="#messages">Messages</button>
             <button class="btn btn-default" data-view="#other">Small Components</button>
           </div>
@@ -150,28 +152,59 @@
           </div>
         </div>
         <div id="frames" style="display: none;">
-          <div class="main-border">
-            <div class="content-frame">
-              <div class="frame-inner">
-                <ul class="list-select list-editable">
-                  <li class="active" draggable="true">
-                    <details>
-                      <summary>Apple</summary>
-                      <ul>
-                        <li>
-                          Test
-                        </li>
-                        <li>Einfarbig</li>
-                      </ul>
-                    </details>
-                  </li>
-                  <li draggable="true">
-                    <span>Fotos</span>
-                  </li>
-                  <li draggable="true">
-                    <span>Ordner</span>
-                  </li>
-                </ul>
+          <div class="pane-group">
+            <div class="pane">
+              <div class="content-frame" style="height: 300px;">
+                <div class="frame-inner">
+                  <ul class="list-select list-editable">
+                    <li class="active" draggable="true">
+                      <details>
+                        <summary>Apple</summary>
+                        <ul>
+                          <li>Pinapple</li>
+                          <li>Apple</li>
+                        </ul>
+                      </details>
+                    </li>
+                    <li draggable="true">
+                      <span>Strawberry</span>
+                    </li>
+                    <li draggable="true">
+                      <span>Cherry</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="toolbar">
+                  <button class="btn btn-add"></button>
+                  <button class="btn btn-remove" disabled></button>
+                </div>
+              </div>
+            </div>
+            <div class="pane">
+              <div class="content-frame" style="height: 300px;">
+                <div class="frame-inner">
+                  <ul class="list-select list-editable">
+                    <li class="active" draggable="true">
+                      <details>
+                        <summary>Orange</summary>
+                        <ul>
+                          <li>Bloodorange</li>
+                          <li>Orange</li>
+                        </ul>
+                      </details>
+                    </li>
+                    <li draggable="true">
+                      <span>Banana</span>
+                    </li>
+                    <li draggable="true">
+                      <span>Grapefruit</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="toolbar">
+                  <button class="btn btn-add"></button>
+                  <button class="btn btn-remove" disabled></button>
+                </div>
               </div>
             </div>
           </div>

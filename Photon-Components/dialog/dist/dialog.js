@@ -1,6 +1,6 @@
 function dialogAction(dialog, options) {
   if (!options) options = {};
-  var opts = options.fillDefaults({
+  var opts = fillDefaults(options, {
     action: "auto",
     speed: 0.3
   });
@@ -29,10 +29,9 @@ function dialogAction(dialog, options) {
       });
     });
   }
-}
-
-Object.prototype.fillDefaults = function(defaults) {
-  var keys = Object.keys(defaults);
-  for (var i = 0; i < keys.length; i++) this[keys[i]] = typeof defaults[keys[i]] == "object" ? this[keys[i]].fillDefaults(defaults[keys[i]]) : (!(keys[i] in this) ? defaults[keys[i]] : this[keys[i]]);
-  return this;
+  function fillDefaults(obj, defaults) {
+    var keys = Object.keys(defaults);
+    for (var i = 0; i < keys.length; i++) obj[keys[i]] = typeof defaults[keys[i]] == "object" ? fillDefaults(obj[keys[i]], defaults[keys[i]]) : (!(keys[i] in obj) ? defaults[keys[i]] : obj[keys[i]]);
+    return obj;
+  }
 }
