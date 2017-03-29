@@ -253,7 +253,7 @@
     }
   }
   function getTransDur(e) {
-    return parseFloat(window.getComputedStyle(e, null).getPropertyValue("transition-duration").replace(/[a-z]/g, ""))
+    return parseFloat(window.getComputedStyle(e, null).getPropertyValue("transition-duration").replace(/[a-z]/g, "").replace(/,/g, "."))
   }
   function getItemsDraggable(items) {
     var res = [];
