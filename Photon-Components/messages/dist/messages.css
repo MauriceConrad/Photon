@@ -118,6 +118,74 @@
   padding: 3px 10px 3px 15px;
   letter-spacing: 0.25px;
 }
+.messages-view .messages li.attachment .message-content {
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+}
+.messages-view .messages li audio::-webkit-media-controls-panel {
+  background-color: transparent;
+}
+.messages-view .messages li[data-type="self"] {
+  --fillColor: #fff;
+}
+.messages-view .messages li[data-type="extern"] {
+  --fillColor: #000;
+}
+.messages-view .messages li audio::-webkit-media-controls-play-button,
+.messages-view .messages li audio::-webkit-media-controls-mute-button {
+  background-color: var(--fillColor);
+  width: 25px;
+  height: 25px;
+  margin: 0px 10px;
+}
+.messages-view .messages li audio::-webkit-media-controls-play-button {
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50%" cy="50%" r="47px" style="stroke: #fff; fill: none; stroke-width: 3px;"/><polygon style="" points="35,25 35,75 75,50"/></svg>');
+}
+.messages-view .messages li audio::-webkit-media-controls-mute-button {
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 50 50"> <path style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;-inkscape-font-specification:Bitstream Vera Sans" d="M 24.15625 3 C 23.851862 3.0016554 23.551978 3.0607525 23.25 3.15625 C 22.646044 3.3472449 22.066553 3.706971 21.5625 4.21875 L 9.8125 15.96875 L 3 15.96875 C 1.3325274 15.96875 -0.03125 17.333644 -0.03125 19 L -0.03125 31 C -0.03125 32.666356 1.3325274 34.03125 3 34.03125 L 9.8125 34.03125 L 21.53125 45.6875 C 22.648622 46.810194 24.080674 47.300804 25.25 46.75 C 26.426482 46.195825 27 44.858857 27 43.3125 L 27 6.3125 C 27 4.8133767 26.234377 3.5647259 25.0625 3.15625 C 24.769531 3.054131 24.460638 2.9983446 24.15625 3 z M 24.1875 5 C 24.289815 4.9983755 24.366657 5.0065565 24.4375 5.03125 C 24.720873 5.1300241 25 5.3826233 25 6.3125 L 25 43.3125 C 25 44.380143 24.650018 44.853925 24.40625 44.96875 C 24.162482 45.083575 23.674799 45.092848 22.90625 44.3125 L 10.3125 31.71875 A 0.99009901 0.99009901 0 0 0 10.25 31.6875 C 10.325876 31.753128 10 31.121757 10 30.75 L 10 19.25 C 10 18.878243 10.336543 18.237645 10.25 18.3125 A 0.99009901 0.99009901 0 0 0 10.3125 18.25 L 22.96875 5.625 C 23.43592 5.1506686 23.880556 5.0048735 24.1875 5 z M 3 18.03125 L 8.1875 18.03125 C 8.05955 18.414989 8 18.830961 8 19.25 L 8 30.75 C 8 31.166241 8.0641841 31.58298 8.1875 31.96875 L 3 31.96875 C 2.4614726 31.96875 2.03125 31.537644 2.03125 31 L 2.03125 19 C 2.03125 18.462356 2.4614726 18.03125 3 18.03125 z M 31.90625 18.96875 A 1.0001 1.0001 0 0 0 31.78125 19 A 1.0001 1.0001 0 0 0 31.28125 20.71875 L 35.5625 25 L 31.28125 29.28125 A 1.016466 1.016466 0 1 0 32.71875 30.71875 L 37 26.4375 L 41.28125 30.71875 A 1.016466 1.016466 0 1 0 42.71875 29.28125 L 38.4375 25 L 42.71875 20.71875 A 1.0001 1.0001 0 0 0 41.875 19 A 1.0001 1.0001 0 0 0 41.28125 19.28125 L 37 23.5625 L 32.71875 19.28125 A 1.0001 1.0001 0 0 0 31.90625 18.96875 z" color="#000" overflow="visible" enable-background="accumulate" font-family="Bitstream Vera Sans"></path></svg>');
+}
+.messages-view .messages li[data-type="self"] audio::-webkit-media-controls-play-button {
+  margin: 0px 5px;
+}
+.messages-view .messages li[data-type="self"] audio::-webkit-media-controls-mute-button {
+  margin: 0px 10px 0px 0px;
+}
+.messages-view .messages li[data-type="extern"] audio::-webkit-media-controls-play-button {
+  margin: 0px 10px;
+}
+.messages-view .messages li[data-type="extern"] audio::-webkit-media-controls-mute-button {
+  margin: 0px 5px 0px 0px;
+}
+.messages-view .messages li audio::-webkit-media-controls-timeline-container {
+  background-color: red;
+}
+.messages-view .messages li audio::-webkit-media-controls-timeline {
+  background-color: var(--fillColor);
+}
+/*audio::-webkit-media-controls-volume-slider {
+    -webkit-filter: hue-rotate(143deg) saturate(10);
+}*/
+.messages-view .messages li audio::-webkit-media-controls-timeline {
+  -webkit-filter: brightness(0);/*hsl(0, 0%, 100%)*/
+}
+.messages-view .messages li[data-type="self"] audio::-webkit-media-controls-timeline {
+  -webkit-filter: brightness(0) invert(1);/*hsl(0, 0%, 100%)*/
+}
+.messages-view .messages li audio::-webkit-media-controls-volume-slider {
+  display: none;
+}
+.messages-view .messages li audio::-webkit-media-controls-current-time-display,
+.messages-view .messages li audio::-webkit-media-controls-time-remaining-display {
+  color: var(--fillColor);
+}
+
+.messages-view .messages li {
+
+}
+.messages-view .messages li {
+
+}
 .messages-view .message-input {
   height: 23px;
   box-sizing: border-box;

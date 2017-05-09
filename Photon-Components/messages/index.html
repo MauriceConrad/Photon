@@ -37,7 +37,7 @@
           var messages = messager.getMessages();
           console.log(messages);
         }, 1000);
-        addDocumentation();
+        //addDocumentation();
         messager.messageContainer.addEventListener("select", function(event) {
           console.log("Selected Message! Event.detail", event.detail);
         });
@@ -236,7 +236,13 @@
               <button class="btn btn-text btn-show-code" style="float: right; margin-right: 10px;">Code </button>
             </div>
           </div>
-          <ul class="messages"></ul>
+          <ul class="messages">
+            <li data-type="self" class="attachment">
+              <div class="message-content">
+                <audio src="dist/sounds/Sent_Message.wav" controls></audio>
+              </div>
+            </li>
+          </ul>
           <div class="tool-bar">
             <input type="text" class="message-input" placeholder="iMessage">
             <button class="btn btn-emojis btn-input" data-insert-target=".message-input"></button>

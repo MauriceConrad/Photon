@@ -1,5 +1,11 @@
 {
+<<<<<<< Updated upstream
   "name"    : "Button system show case",
   "version" : "0.1.0",
   "main"    : "main.js"
+=======
+	"name": "Buttons show case",
+	"version": "0.1.0",
+	"main": "main.js"
+>>>>>>> Stashed changes
 }

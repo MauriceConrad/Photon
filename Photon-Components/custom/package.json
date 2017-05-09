@@ -1,5 +1,6 @@
 {
-	"name": "Toolbar",
+	"name": "Custom styles",
 	"version": "0.1.0",
+	"description": "Custom styles for Photon because some colors aren't really native looking.",
 	"main": "main.js"
 }

@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9AB75DFA1EB21EFA00457FEC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB75DF91EB21EFA00457FEC /* AppDelegate.m */; };
+		9AB75DFD1EB21EFA00457FEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB75DFC1EB21EFA00457FEC /* main.m */; };
+		9AB75E001EB21EFA00457FEC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB75DFF1EB21EFA00457FEC /* ViewController.m */; };
+		9AB75E021EB21EFA00457FEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AB75E011EB21EFA00457FEC /* Assets.xcassets */; };
+		9AB75E051EB21EFA00457FEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AB75E031EB21EFA00457FEC /* Main.storyboard */; };
+		9AB75E101EB21EFA00457FEC /* Trackpad_Gesture_ListenerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB75E0F1EB21EFA00457FEC /* Trackpad_Gesture_ListenerTests.m */; };
+		9AB75E1B1EB21EFA00457FEC /* Trackpad_Gesture_ListenerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB75E1A1EB21EFA00457FEC /* Trackpad_Gesture_ListenerUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9AB75E0C1EB21EFA00457FEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AB75DED1EB21EF900457FEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AB75DF41EB21EF900457FEC;
+			remoteInfo = "Trackpad Gesture Listener";
+		};
+		9AB75E171EB21EFA00457FEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AB75DED1EB21EF900457FEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AB75DF41EB21EF900457FEC;
+			remoteInfo = "Trackpad Gesture Listener";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9AB75DF51EB21EFA00457FEC /* Trackpad Gesture Listener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trackpad Gesture Listener.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AB75DF81EB21EFA00457FEC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9AB75DF91EB21EFA00457FEC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9AB75DFC1EB21EFA00457FEC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9AB75DFE1EB21EFA00457FEC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9AB75DFF1EB21EFA00457FEC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9AB75E011EB21EFA00457FEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9AB75E041EB21EFA00457FEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9AB75E061EB21EFA00457FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AB75E0B1EB21EFA00457FEC /* Trackpad Gesture ListenerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trackpad Gesture ListenerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AB75E0F1EB21EFA00457FEC /* Trackpad_Gesture_ListenerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Trackpad_Gesture_ListenerTests.m; sourceTree = "<group>"; };
+		9AB75E111EB21EFA00457FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AB75E161EB21EFA00457FEC /* Trackpad Gesture ListenerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trackpad Gesture ListenerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AB75E1A1EB21EFA00457FEC /* Trackpad_Gesture_ListenerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Trackpad_Gesture_ListenerUITests.m; sourceTree = "<group>"; };
+		9AB75E1C1EB21EFA00457FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9AB75DF21EB21EF900457FEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AB75E081EB21EFA00457FEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AB75E131EB21EFA00457FEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9AB75DEC1EB21EF900457FEC = {
+			isa = PBXGroup;
+			children = (
+				9AB75DF71EB21EFA00457FEC /* Trackpad Gesture Listener */,
+				9AB75E0E1EB21EFA00457FEC /* Trackpad Gesture ListenerTests */,
+				9AB75E191EB21EFA00457FEC /* Trackpad Gesture ListenerUITests */,
+				9AB75DF61EB21EFA00457FEC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9AB75DF61EB21EFA00457FEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AB75DF51EB21EFA00457FEC /* Trackpad Gesture Listener.app */,
+				9AB75E0B1EB21EFA00457FEC /* Trackpad Gesture ListenerTests.xctest */,
+				9AB75E161EB21EFA00457FEC /* Trackpad Gesture ListenerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9AB75DF71EB21EFA00457FEC /* Trackpad Gesture Listener */ = {
+			isa = PBXGroup;
+			children = (
+				9AB75DF81EB21EFA00457FEC /* AppDelegate.h */,
+				9AB75DF91EB21EFA00457FEC /* AppDelegate.m */,
+				9AB75DFE1EB21EFA00457FEC /* ViewController.h */,
+				9AB75DFF1EB21EFA00457FEC /* ViewController.m */,
+				9AB75E011EB21EFA00457FEC /* Assets.xcassets */,
+				9AB75E031EB21EFA00457FEC /* Main.storyboard */,
+				9AB75E061EB21EFA00457FEC /* Info.plist */,
+				9AB75DFB1EB21EFA00457FEC /* Supporting Files */,
+			);
+			path = "Trackpad Gesture Listener";
+			sourceTree = "<group>";
+		};
+		9AB75DFB1EB21EFA00457FEC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9AB75DFC1EB21EFA00457FEC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9AB75E0E1EB21EFA00457FEC /* Trackpad Gesture ListenerTests */ = {
+			isa = PBXGroup;
+			children = (
+				9AB75E0F1EB21EFA00457FEC /* Trackpad_Gesture_ListenerTests.m */,
+				9AB75E111EB21EFA00457FEC /* Info.plist */,
+			);
+			path = "Trackpad Gesture ListenerTests";
+			sourceTree = "<group>";
+		};
+		9AB75E191EB21EFA00457FEC /* Trackpad Gesture ListenerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9AB75E1A1EB21EFA00457FEC /* Trackpad_Gesture_ListenerUITests.m */,
+				9AB75E1C1EB21EFA00457FEC /* Info.plist */,
+			);
+			path = "Trackpad Gesture ListenerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9AB75DF41EB21EF900457FEC /* Trackpad Gesture Listener */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AB75E1F1EB21EFA00457FEC /* Build configuration list for PBXNativeTarget "Trackpad Gesture Listener" */;
+			buildPhases = (
+				9AB75DF11EB21EF900457FEC /* Sources */,
+				9AB75DF21EB21EF900457FEC /* Frameworks */,
+				9AB75DF31EB21EF900457FEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Trackpad Gesture Listener";
+			productName = "Trackpad Gesture Listener";
+			productReference = 9AB75DF51EB21EFA00457FEC /* Trackpad Gesture Listener.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9AB75E0A1EB21EFA00457FEC /* Trackpad Gesture ListenerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AB75E221EB21EFA00457FEC /* Build configuration list for PBXNativeTarget "Trackpad Gesture ListenerTests" */;
+			buildPhases = (
+				9AB75E071EB21EFA00457FEC /* Sources */,
+				9AB75E081EB21EFA00457FEC /* Frameworks */,
+				9AB75E091EB21EFA00457FEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9AB75E0D1EB21EFA00457FEC /* PBXTargetDependency */,
+			);
+			name = "Trackpad Gesture ListenerTests";
+			productName = "Trackpad Gesture ListenerTests";
+			productReference = 9AB75E0B1EB21EFA00457FEC /* Trackpad Gesture ListenerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9AB75E151EB21EFA00457FEC /* Trackpad Gesture ListenerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AB75E251EB21EFA00457FEC /* Build configuration list for PBXNativeTarget "Trackpad Gesture ListenerUITests" */;
+			buildPhases = (
+				9AB75E121EB21EFA00457FEC /* Sources */,
+				9AB75E131EB21EFA00457FEC /* Frameworks */,
+				9AB75E141EB21EFA00457FEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9AB75E181EB21EFA00457FEC /* PBXTargetDependency */,
+			);
+			name = "Trackpad Gesture ListenerUITests";
+			productName = "Trackpad Gesture ListenerUITests";
+			productReference = 9AB75E161EB21EFA00457FEC /* Trackpad Gesture ListenerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9AB75DED1EB21EF900457FEC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Maurice Conrad";
+				TargetAttributes = {
+					9AB75DF41EB21EF900457FEC = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					9AB75E0A1EB21EFA00457FEC = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9AB75DF41EB21EF900457FEC;
+					};
+					9AB75E151EB21EFA00457FEC = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9AB75DF41EB21EF900457FEC;
+					};
+				};
+			};
+			buildConfigurationList = 9AB75DF01EB21EF900457FEC /* Build configuration list for PBXProject "Trackpad Gesture Listener" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9AB75DEC1EB21EF900457FEC;
+			productRefGroup = 9AB75DF61EB21EFA00457FEC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9AB75DF41EB21EF900457FEC /* Trackpad Gesture Listener */,
+				9AB75E0A1EB21EFA00457FEC /* Trackpad Gesture ListenerTests */,
+				9AB75E151EB21EFA00457FEC /* Trackpad Gesture ListenerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9AB75DF31EB21EF900457FEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AB75E021EB21EFA00457FEC /* Assets.xcassets in Resources */,
+				9AB75E051EB21EFA00457FEC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AB75E091EB21EFA00457FEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AB75E141EB21EFA00457FEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9AB75DF11EB21EF900457FEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AB75E001EB21EFA00457FEC /* ViewController.m in Sources */,
+				9AB75DFD1EB21EFA00457FEC /* main.m in Sources */,
+				9AB75DFA1EB21EFA00457FEC /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AB75E071EB21EFA00457FEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AB75E101EB21EFA00457FEC /* Trackpad_Gesture_ListenerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AB75E121EB21EFA00457FEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AB75E1B1EB21EFA00457FEC /* Trackpad_Gesture_ListenerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9AB75E0D1EB21EFA00457FEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9AB75DF41EB21EF900457FEC /* Trackpad Gesture Listener */;
+			targetProxy = 9AB75E0C1EB21EFA00457FEC /* PBXContainerItemProxy */;
+		};
+		9AB75E181EB21EFA00457FEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9AB75DF41EB21EF900457FEC /* Trackpad Gesture Listener */;
+			targetProxy = 9AB75E171EB21EFA00457FEC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9AB75E031EB21EFA00457FEC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9AB75E041EB21EFA00457FEC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9AB75E1D1EB21EFA00457FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9AB75E1E1EB21EFA00457FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9AB75E201EB21EFA00457FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Trackpad Gesture Listener/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.popovertest.mauriceconrad.Trackpad-Gesture-Listener";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9AB75E211EB21EFA00457FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Trackpad Gesture Listener/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.popovertest.mauriceconrad.Trackpad-Gesture-Listener";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9AB75E231EB21EFA00457FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Trackpad Gesture ListenerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.popovertest.mauriceconrad.Trackpad-Gesture-ListenerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Trackpad Gesture Listener.app/Contents/MacOS/Trackpad Gesture Listener";
+			};
+			name = Debug;
+		};
+		9AB75E241EB21EFA00457FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Trackpad Gesture ListenerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.popovertest.mauriceconrad.Trackpad-Gesture-ListenerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Trackpad Gesture Listener.app/Contents/MacOS/Trackpad Gesture Listener";
+			};
+			name = Release;
+		};
+		9AB75E261EB21EFA00457FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Trackpad Gesture ListenerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.popovertest.mauriceconrad.Trackpad-Gesture-ListenerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Trackpad Gesture Listener";
+			};
+			name = Debug;
+		};
+		9AB75E271EB21EFA00457FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Trackpad Gesture ListenerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.popovertest.mauriceconrad.Trackpad-Gesture-ListenerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Trackpad Gesture Listener";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9AB75DF01EB21EF900457FEC /* Build configuration list for PBXProject "Trackpad Gesture Listener" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AB75E1D1EB21EFA00457FEC /* Debug */,
+				9AB75E1E1EB21EFA00457FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9AB75E1F1EB21EFA00457FEC /* Build configuration list for PBXNativeTarget "Trackpad Gesture Listener" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AB75E201EB21EFA00457FEC /* Debug */,
+				9AB75E211EB21EFA00457FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9AB75E221EB21EFA00457FEC /* Build configuration list for PBXNativeTarget "Trackpad Gesture ListenerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AB75E231EB21EFA00457FEC /* Debug */,
+				9AB75E241EB21EFA00457FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9AB75E251EB21EFA00457FEC /* Build configuration list for PBXNativeTarget "Trackpad Gesture ListenerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AB75E261EB21EFA00457FEC /* Debug */,
+				9AB75E271EB21EFA00457FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9AB75DED1EB21EF900457FEC /* Project object */;
+}
