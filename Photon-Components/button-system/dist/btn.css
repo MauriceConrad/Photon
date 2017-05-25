@@ -15,7 +15,7 @@
   border-right-color: rgb(192, 192, 192);
 }
 
-.btn-system.btn-active:not([disabled]), .btn-system:active {
+.btn-system.btn-active:not([disabled]), .btn-system:active:not([disabled]) {
   /*color: #fff;
   font-weight: 300;
   letter-spacing: 0.8px;
@@ -35,7 +35,10 @@
   border-right-color: rgb(39, 122, 252);
   background-image: linear-gradient(rgb(94, 168, 249), rgb(14, 117, 255));
 }
-.btn-system:active {
+.btn-system.btn-active::not([disabled]) {
+
+}
+.btn-system:active:not([disabled]), .btn-system.btn-active:active:not([disabled]) {
   border-top-color: rgb(30, 114, 254);
   border-bottom-color: rgb(3, 56, 216);
   border-left-color: rgb(16, 82, 233);
@@ -44,12 +47,10 @@
 }
 .btn-system[disabled] {
   border-color: rgb(212, 212, 212);
+  background-image: none;
   background-color: rgb(247, 247, 247);
   color: rgb(168, 168, 168);
   box-shadow: 0px 1px 0px -0.5px rgba(120, 120, 120, 0.2);
-}
-.btn-system.btn-active[disabled] {
-
 }
 
 @media only screen and (min--moz-device-pixel-ratio: 2),
