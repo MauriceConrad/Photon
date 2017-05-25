@@ -104,17 +104,6 @@
       </header>
       <div class="window-content">
         <div class="code-main">
-          <div class="btn-group" data-group-relationship="relative">
-            <button class="btn btn-segment active">Btn A</button>
-            <button class="btn btn-segment">Btn B</button>
-          </div>
-          <br><br>
-          <div class="btn-group seperated" data-group-relationship="relative">
-            <button class="btn btn-segment active">Btn A</button>
-            <button class="btn btn-segment">Btn B</button>
-            <button class="btn btn-segment">Btn B</button>
-            <!--<button class="btn btn-segment">Btn C</button>-->
-          </div>
           <h2>Usage</h2>
           <h3>Required</h3>
           <p>
@@ -197,6 +186,24 @@
             <button class="btn btn-default active">Btn A</button>
             <button class="btn btn-default">Btn B</button>
             <button class="btn btn-default">Btn C</button>
+          </div>
+          <br><br>
+          <h4>Inner borders</h4>
+          <p>If you use a relative relationship, maybe you want the segments to be seperated with a blue border</p>
+          <pre>
+            <code class="html">...
+  &#x3c;div class="btn-group seperated" data-group-relationship="relative"&#x3e;
+    &#x3c;button class="btn btn-segment active"&#x3e;Segment A&#x3c;/button&#x3e;
+    &#x3c;button class="btn btn-segment active"&#x3e;Segment B&#x3c;/button&#x3e;
+    &#x3c;button class="btn btn-segment active"&#x3e;Segment C&#x3c;/button&#x3e;
+  &#x3c;/div&#x3e;
+...</code>
+          </pre>
+          <h4>Preview</h4>
+          <div class="btn-group seperated" data-group-relationship="relative">
+            <button class="btn btn-segment active">Segment A</button>
+            <button class="btn btn-segment active">Segment B</button>
+            <button class="btn btn-segment active">Segment C</button>
           </div>
           <h4>Same Width</h4>
           <pre>
