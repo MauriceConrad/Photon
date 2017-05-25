@@ -9,6 +9,7 @@
   border-top: 1px solid rgb(205, 205, 205);
   border-bottom: 1px solid rgb(174, 174, 174);
   box-sizing: border-box;
+  z-index: 1;
 }
 .btn-group .btn.btn-segment:first-child {
   border-radius: 4.5px 0px 0px 4.5px;
@@ -28,7 +29,7 @@
 }
 .btn-group .btn.btn-segment.active {
   border-right: none;
-
+  z-index: 3;
 }
 .btn-group .btn.btn-segment.active {
   border-top-color: rgb(73, 160, 249);
@@ -37,6 +38,7 @@
   color: #fff;
   font-weight: 300;
   letter-spacing: 1px;
+  background-size: 100% 100%;
 }
 .btn-group .btn-segment.active:last-child {
   border-right: 1px solid rgb(73, 160, 249);
@@ -79,10 +81,39 @@ only screen and (min-device-pixel-ratio: 2) {
     border-right: none;
     padding: 0px 12px;
     box-shadow: inset 0px 0px 0px 0.5px rgb(30, 130, 253);
-
+    box-shadow: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><rect x="0px" y="0px" width="100%" height="0.5px" style="fill: rgb(30, 130, 253);"/></svg>'),
+                      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><rect x="0px" y="0px" width="100%" height="0.5px" style="fill: rgb(30, 130, 253);"/></svg>'),
+                      linear-gradient(to bottom, rgb(105, 180, 250), rgb(13, 128, 255));
+    background-position: left top, left bottom, center;
+    background-size: 100% 1px, 100% 1px, 100% 100%;
+    background-repeat: no-repeat;
+    z-index: 3;
   }
-  .btn-group .btn.btn-segment.active:first-child + .btn.btn-segment.active:last-child {
-    box-shadow: inset -0.5px 0px 0px 0.5px rgb(30, 130, 253);
+  .btn-group .btn.btn-segment.active:active:hover {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><rect x="0px" y="0px" width="100%" height="0.5px" style="fill: rgb(0, 107, 238);"/></svg>'),
+                      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><rect x="0px" y="0px" width="100%" height="0.5px" style="fill: rgb(0, 107, 238);"/></svg>'),
+                      linear-gradient(to bottom, rgb(74, 152, 253), rgb(7, 102, 227)) !important;
+    background-position: left top, left bottom, center;
+    background-size: 100% 1px, 100% 1px, 100% 100%;
+  }
+  .btn-group .btn.btn-segment.active:first-child, .btn-group .btn.btn-segment.active:last-child {
+    background-image: linear-gradient(to bottom, rgb(105, 180, 250), rgb(13, 128, 255));
+    background-position: center;
+    background-size: 100% 100%;
+  }
+  .btn-group .btn.btn-segment.active:first-child {
+    box-shadow: inset 0px 0px 0px 0.5px rgb(30, 130, 253);
+  }
+  .btn-group .btn.btn-segment.active:last-child {
+    box-shadow: inset 0px 0px 0px 0.5px rgb(30, 130, 253);
+    z-index: 1;
+  }
+  .btn-group.seperated .btn.btn-segment.active {
+    background-image: linear-gradient(to bottom, rgb(105, 180, 250), rgb(13, 128, 255));
+    background-position: center;
+    background-size: 100% 100%;
+    box-shadow: inset 0px 0px 0px 0.5px rgb(30, 130, 253);
   }
 
 }
