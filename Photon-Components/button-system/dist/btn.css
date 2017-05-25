@@ -48,7 +48,7 @@
 .btn-system[disabled] {
   border-color: rgb(212, 212, 212);
   background-image: none;
-  background-color: rgb(247, 247, 247);
+  background-color: rgb(248, 248, 248);
   color: rgb(168, 168, 168);
   box-shadow: 0px 1px 0px -0.5px rgba(120, 120, 120, 0.2);
 }
