@@ -47,13 +47,16 @@
   border-left-color: rgb(73, 160, 249);
 }
 .btn-group .btn-segment.active + .btn-segment {
-  border-left: none !important;
+  border-left: none;
 }
 .btn-group.fill-width {
   display: inline-flex;
 }
 .btn-group.fill-width .btn {
   flex: 1;
+}
+.btn-group.seperated .btn-segment.active {
+  border-left: 1px solid rgb(30, 140, 254);
 }
 
 @media only screen and (min--moz-device-pixel-ratio: 2),
