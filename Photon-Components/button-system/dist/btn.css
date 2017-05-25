@@ -15,7 +15,7 @@
   border-right-color: rgb(192, 192, 192);
 }
 
-.btn-system.btn-active, .btn-system:active {
+.btn-system.btn-active:not([disabled]), .btn-system:active {
   /*color: #fff;
   font-weight: 300;
   letter-spacing: 0.8px;
@@ -49,7 +49,7 @@
   box-shadow: 0px 1px 0px -0.5px rgba(120, 120, 120, 0.2);
 }
 .btn-system.btn-active[disabled] {
-  background-image: none;
+
 }
 
 @media only screen and (min--moz-device-pixel-ratio: 2),
@@ -75,7 +75,7 @@ only screen and (min-device-pixel-ratio: 2) {
                       url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><rect x="0%"/></svg>');
 
   }
-  .btn-system.btn-active, .btn-system:active {
+  .btn-system.btn-active:not([disabled]), .btn-system:active {
     border-radius: 3.5px;
     font-weight: 300;
     letter-spacing: 0.375px;
@@ -87,7 +87,6 @@ only screen and (min-device-pixel-ratio: 2) {
   }
   .btn-system:active {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><rect x="0%" y="0%" width="100%" height="100%" style="fill: none; stroke: #0955ff; stroke-width: 0.5px;" rx="4px"/></svg>'), linear-gradient(rgb(64, 140, 253), rgb(11, 93, 224));
-
   }
   .btn-system[disabled], .btn-system.btn-active[disabled] {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><rect x="0%" y="0%" width="100%" height="100%" style="fill: none; stroke: rgb(212, 212, 212); stroke-width: 0.5px; stroke-location: inside;" rx="4px"/></svg>'),
