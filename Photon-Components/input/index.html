@@ -44,14 +44,29 @@
             <code class="html">&#x3c;head&#x3e;
   ...
   &#x3c;link rel="stylesheet" href="input.css"&#x3e;
+  &#x3c;!--input.js required for the stepper interaction--&#x3e;
+  &#x3c;script type="javascript" src="input.js"&#x3e;&#x3c;/script&#x3e;
   ...
 &#x3c;/head&#x3e;</code>
           </pre>
           <h3>Inputs</h3>
           <pre>
             <code class="html">
+  &#x3c;!--Simple input field--&#x3e;
   &#x3c;input type="text"&#x3e;
-  &#x3c;input type="number"&#x3e;
+
+  &#x3c;br&#x3e;
+  &#x3c;!--Search field--&#x3e;
+  &#x3c;input type="search" placeholder="Search"&#x3e;
+
+  &#x3c;br&#x3e;
+  &#x3c;!--Input number with stepper--&#x3e;
+  &#x3c;input type="number" step=".5" min="-4" max="20.5" id="myInputNumber1"&#x3e;
+  &#x3c;div class="stepper" data-input="#myInputNumber1"&#x3e;
+    &#x3c;button&#x3e;&#x3c;/button&#x3e;
+    &#x3c;button&#x3e;&#x3c;/button&#x3e;
+  &#x3c;/div&#x3e;
+  &#x3c;!--A stepper points on an input with the attribute "data-input" containing a query selector of the input--&#x3e;
             </code>
           </pre>
           <span>Text Field</span>
@@ -61,8 +76,8 @@
           <input type="search" placeholder="Search">
           <br>
           <span>Text Field with stepper</span>
-          <input type="number">
-          <div class="stepper">
+          <input type="number" step=".5" min="-4" max="20.5" id="myInputNumber1">
+          <div class="stepper" data-input="#myInputNumber1">
             <button></button>
             <button></button>
           </div>

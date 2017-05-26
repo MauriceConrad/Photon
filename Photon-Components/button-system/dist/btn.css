@@ -74,6 +74,7 @@ only screen and (min-device-pixel-ratio: 2) {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><rect x="0%" y="0%" width="100%" height="100%" style="fill: none; stroke: rgb(185, 185, 185); stroke-width: 0.5px; stroke-location: inside;" rx="4px"/></svg>'),
                       url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><rect x="0%" y="0%" width="100%" height="100%" style="fill: none; stroke: rgb(185, 185, 185); stroke-width: 0.5px; stroke-location: inside; stroke-dasharray: 1000px; stroke-dashoffset: 0px;" rx="4px"/></svg>'),
                       url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><rect x="0%"/></svg>');
+    background-size: 100% 100%;
 
   }
   .btn-system.btn-active:not([disabled]), .btn-system:active {
@@ -82,15 +83,16 @@ only screen and (min-device-pixel-ratio: 2) {
     letter-spacing: 0.375px;
   }
   .btn-system.btn-active {
-
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><rect x="0%" y="0%" width="100%" height="100%" style="fill: none; stroke: #0955ff; stroke-width: 0.5px;" rx="4px"/></svg>'), linear-gradient(rgb(94, 168, 249), rgb(14, 117, 255));
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><rect x="0%" y="0%" width="100%" height="100%" style="fill: none; stroke: #0955ff; stroke-width: 0.5px; stroke-location: inside;" rx="4px"/></svg>'),
+                      linear-gradient(rgb(94, 168, 249), rgb(14, 117, 255)) !important;
 
   }
   .btn-system:active {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><rect x="0%" y="0%" width="100%" height="100%" style="fill: none; stroke: #0955ff; stroke-width: 0.5px;" rx="4px"/></svg>'), linear-gradient(rgb(64, 140, 253), rgb(11, 93, 224));
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><rect x="0%" y="0%" width="100%" height="100%" style="fill: none; stroke: #0955ff; stroke-width: 0.5px; stroke-location: inside;" rx="4px"/></svg>'),
+                      linear-gradient(rgb(64, 140, 253), rgb(11, 93, 224)) !important;
   }
   .btn-system[disabled], .btn-system.btn-active[disabled] {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><rect x="0%" y="0%" width="100%" height="100%" style="fill: none; stroke: rgb(212, 212, 212); stroke-width: 0.5px; stroke-location: inside;" rx="4px"/></svg>'),
-                      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><rect x="0%" y="0%" width="100%" height="100%" style="fill: none; stroke: rgb(212, 212, 212); stroke-width: 0.5px; stroke-location: inside; stroke-dasharray: 1000px; stroke-dashoffset: 0px;" rx="4px"/></svg>');
+                      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><rect x="0%" y="0%" width="100%" height="100%" style="fill: none; stroke: rgb(212, 212, 212); stroke-width: 0.5px; stroke-location: inside; stroke-dasharray: 1000px; stroke-dashoffset: 0px;" rx="4px"/></svg>') !important;
   }
 }
