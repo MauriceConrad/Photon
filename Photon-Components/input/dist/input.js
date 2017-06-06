@@ -58,12 +58,12 @@
   });
 
   function hasParentSelector(e, selector) {
-      var children = [];
-      while ("matches" in e && !e.matches(selector)) {
-        children.push(e);
-        e = e.parentNode;
-      }
+    var children = [];
+    while ("matches" in e && !e.matches(selector)) {
       children.push(e);
-      return ("matches" in e && e.matches(selector)) ? children : false;
+      e = e.parentNode;
     }
+    children.push(e);
+    return ("matches" in e && e.matches(selector)) ? children : false;
+  }
 })();

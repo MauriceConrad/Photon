@@ -59,6 +59,12 @@
 .btn-group.seperated .btn-segment.active {
   border-left: 1px solid rgb(30, 140, 254);
 }
+.btn-group .btn.btn-segment[disabled], .btn-group .btn.btn-segment.active[disabled] {
+  border-color: rgb(212, 212, 212);
+  background-image: none !important;
+  background-color: rgb(248, 248, 248);
+  color: rgb(168, 168, 168);
+}
 
 @media only screen and (min--moz-device-pixel-ratio: 2),
 only screen and (-o-min-device-pixel-ratio: 2/1),

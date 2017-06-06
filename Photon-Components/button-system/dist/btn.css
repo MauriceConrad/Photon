@@ -15,7 +15,7 @@
   border-right-color: rgb(192, 192, 192);
 }
 
-.btn-system.btn-active:not([disabled]), .btn-system:active:not([disabled]) {
+.btn-system.btn-active:not([disabled])/*, .btn-system:active:not([disabled])*/ {
   /*color: #fff;
   font-weight: 300;
   letter-spacing: 0.8px;
@@ -35,10 +35,7 @@
   border-right-color: rgb(39, 122, 252);
   background-image: linear-gradient(rgb(94, 168, 249), rgb(14, 117, 255));
 }
-.btn-system.btn-active::not([disabled]) {
-
-}
-.btn-system:active:not([disabled]), .btn-system.btn-active:active:not([disabled]) {
+/*.btn-system:active:not([disabled]),*/ .btn-system.btn-active:active:not([disabled]) {
   border-top-color: rgb(30, 114, 254);
   border-bottom-color: rgb(3, 56, 216);
   border-left-color: rgb(16, 82, 233);
@@ -77,17 +74,17 @@ only screen and (min-device-pixel-ratio: 2) {
     background-size: 100% 100%;
 
   }
-  .btn-system.btn-active:not([disabled]), .btn-system:active {
+  .btn-system.btn-active:not([disabled])/*, .btn-system:active*/ {
     border-radius: 3.5px;
     font-weight: 300;
-    letter-spacing: 0.375px;
+    letter-spacing: 0.45px;
   }
   .btn-system.btn-active {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><rect x="0%" y="0%" width="100%" height="100%" style="fill: none; stroke: #0955ff; stroke-width: 0.5px; stroke-location: inside;" rx="4px"/></svg>'),
                       linear-gradient(rgb(94, 168, 249), rgb(14, 117, 255)) !important;
 
   }
-  .btn-system:active {
+  .btn-system.btn-active:active {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><rect x="0%" y="0%" width="100%" height="100%" style="fill: none; stroke: #0955ff; stroke-width: 0.5px; stroke-location: inside;" rx="4px"/></svg>'),
                       linear-gradient(rgb(64, 140, 253), rgb(11, 93, 224)) !important;
   }
