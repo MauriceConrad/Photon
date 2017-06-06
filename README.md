@@ -127,7 +127,7 @@ The segmented control is based on the layout for a "btn-group". In addition ther
 
 The attribute "data-group-relationship" set the relationship between the buttons within the btn-group. If this attribute is "relative" every button can be activated or deactivated. If the attribute is "absolute" there is always one active element. If you activate some, the current active one will be disactived. By default data-group-relationship is "relative".
 
-Fiddle: https://jsfiddle.net/qpzft67s/
+Fiddle: https://jsfiddle.net/95hj625x/
 
 ![Segmented Control](http://s17.postimg.org/niwj0s50f/Bildschirmfoto_2016_09_26_um_21_18_15.png)
 
