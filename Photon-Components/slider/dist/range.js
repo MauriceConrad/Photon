@@ -10,13 +10,15 @@ HTMLInputElement.prototype.sliderVisualCalc = function() {
     this.style.marginBottom = this.offsetWidth + "px";
   }
 }
-window.addEventListener("load", function() {
+window.addEventListener("load", function(event) {
   var sliders = document.getElementsByClassName("slider");
   for (var i = 0; i < sliders.length; i++) {
     sliders[i].sliderVisualCalc();
   }
 }, false);
-window.addEventListener("input", function() {
-  event.target.sliderVisualCalc();
+window.addEventListener("input", function(event) {
+  if (event.target.type === "range") {
+    event.target.sliderVisualCalc();
+  }
 }, false);
 //console.log(HTMLInputElement.prototype);

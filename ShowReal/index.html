@@ -28,6 +28,7 @@
     <script type="text/javascript" src="../Photon-Components/messages/dist/messages.js"></script>
     <script type="text/javascript" src="../Photon-Components/circular-slider/dist/circular-slider.js"></script>
     <script type="text/javascript" src="../Photon-Components/pane-size/dist/pane-size.js"></script>
+    <script type="text/javascript" src="../Photon-Components/input/dist/input.js"></script>
     <title>Show Real Photon</title>
     <script type="text/javascript">
       window.addEventListener("load", function() {
@@ -289,11 +290,17 @@
               <button class="btn btn-segment">Segment 2</button>
               <button class="btn btn-segment">Segment 3</button>
             </div>
-            <br /><br />
+            <br><br>
             <input type="text" value="Text">
-            <br />
-            <input type="number" value="10">
-            <div class="stepper">
+            <br>
+            <input type="number" value="10" id="myInputWithStepper">
+            <div class="stepper" data-input="#myInputWithStepper">
+              <button></button>
+              <button></button>
+            </div>
+            <br>
+            <input type="number" value="5" id="myInputWithSuffix" data-suffix=" px">
+            <div class="stepper" data-input="#myInputWithSuffix">
               <button></button>
               <button></button>
             </div>

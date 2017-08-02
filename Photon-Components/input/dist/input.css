@@ -167,3 +167,6 @@ only screen and (min-device-pixel-ratio: 2) {
                       linear-gradient(rgb(38, 127, 247), rgb(7, 102, 233));
   }
 }
+input[data-type-rule="suffix"] {
+  width: 75px;
+}

@@ -56,8 +56,60 @@ Fiddle: https://jsfiddle.net/1jmro304/
 ## Input
 
 This component is just CSS for native looking input fields and so on.
+The file `input.js` is required if you want to use features like the stepper and the suffix text.
 
-(Documentation in progress)
+### Simple Text Field
+
+```html
+<!--As you can see, it's just simple as it is-->
+<input type="text">
+```
+
+### Search
+
+```html
+<!--Also the search input can be used instead-->
+<input type="search" placeholder="Search">
+```
+
+### Input with stepper
+
+Please keep in mind, that here a complex javascript
+
+```html
+<!--'id' is here just required to select it in the 'data-input' attribute of the stepper. You can use every valid querySelector instead of the id-->
+<input type="number"step=".5" min="-14" max="26" value="2" id="myInput">
+
+<!--This is the stepper-->
+<div class="stepper" data-input="#myInput">
+  <button></button>
+  <button></button>
+</div>
+```
+
+### Suffix for Number Input
+
+As you maybe know from macOS, an input can have a suffix like '*%*', '*px*', '*pt*' or so on.
+This feature allows you to don't care about parsing the suffix. You can set your value normally with javascript and get it and the suffix will be added every time.
+
+```html
+```javascript
+<!--The id is just used to select in the following javascript snippet-->
+<input type="number" value="10" data-suffix=" px" id="#myInput">
+```
+
+As you can see it just works out of the box!
+
+Use `value` normally.
+
+```javascript
+var myInput = document.querySelector("#myInput");
+
+console.log(myInput.value); // Returns the real value without suffix
+
+myInput.value = 400; // Sets the value to '400'. But suffix works
+```
+
 
 ## Dialog
 Dialog component for simple native looking dialogs.
