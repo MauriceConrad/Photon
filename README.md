@@ -58,7 +58,7 @@ Fiddle: https://jsfiddle.net/1jmro304/
 This component is just CSS for native looking input fields and so on.
 The file `input.js` is required if you want to use features like the stepper and the suffix text.
 
-Fiddle: https://jsfiddle.net/vk0u97zp/
+Fiddle: https://jsfiddle.net/dujw6gyL/
 
 ### Simple Text Field
 
