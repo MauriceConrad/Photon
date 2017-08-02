@@ -58,6 +58,8 @@ Fiddle: https://jsfiddle.net/1jmro304/
 This component is just CSS for native looking input fields and so on.
 The file `input.js` is required if you want to use features like the stepper and the suffix text.
 
+Fiddle:
+
 ### Simple Text Field
 
 ```html
@@ -93,7 +95,6 @@ As you maybe know from macOS, an input can have a suffix like '*%*', '*px*', '*p
 This feature allows you to don't care about parsing the suffix. You can set your value normally with javascript and get it and the suffix will be added every time.
 
 ```html
-```javascript
 <!--The id is just used to select in the following javascript snippet-->
 <input type="number" value="10" data-suffix=" px" id="#myInput">
 ```
