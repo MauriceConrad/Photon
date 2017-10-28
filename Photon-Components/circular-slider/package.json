@@ -1,9 +1,5 @@
 {
-<<<<<<< Updated upstream
 	"name": "Circular Slider show  case",
-=======
-	"name": "Ciruclar slider show case",
->>>>>>> Stashed changes
 	"version": "0.1.0",
 	"main": "main.js"
 }
