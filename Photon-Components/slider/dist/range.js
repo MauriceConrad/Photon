@@ -21,4 +21,24 @@ window.addEventListener("input", function(event) {
     event.target.sliderVisualCalc();
   }
 }, false);
-//console.log(HTMLInputElement.prototype);
+
+var valueDescriptor = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, "value");
+
+Object.defineProperty(HTMLInputElement.prototype, "value", {
+  get: valueDescriptor.get,
+  set(value) {
+    valueDescriptor.set.apply(this, [value]);
+    this.sliderVisualCalc();
+    return true;
+  }
+});
+
+/*
+Object.defineProperty(HTMLInputElement.prototype, "value", {
+  get() {
+    return "";
+  },
+  set(value) {
+    return value;
+  }
+});*/
