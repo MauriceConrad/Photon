@@ -1,0 +1,23 @@
+{
+	"name": "electron-photon",
+	"version": "0.1.0",
+	"description": "Photon UI for macOS, windows & linux",
+	"keywords": [
+		"ui",
+		"native",
+		"mac",
+		"windows",
+		"linux"
+	],
+	"license": "ISC",
+	"author": "Maurice Conrad",
+	"main": "photon.js",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/MauriceConrad/Photon.git"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {}
+}
