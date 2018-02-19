@@ -1,15 +1,5 @@
 # PhotonKit-Components
 
-## IMPORTANT
-
-
-**This project is deprecated!**
-
-Please have a look at the new release of **[Photon 1.0](https://github.com/MauriceConrad/PhotonKit-Components)**!
-
-[Photon 1.0](https://github.com/MauriceConrad/PhotonKit-Components)
-
-
 Some components for the PhtonKit Framework to build native UI's in CSS/JS.
 
 Please make sure, that maybe the JSFiddle doesn't looks like expected if you use another engine as blink.
