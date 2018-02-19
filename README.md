@@ -15,6 +15,7 @@ npm install electron-photon
 ## Usage
 
 ```javascript
+// Require photon
 const Photon = require("electron-photon");
 ```
 
@@ -199,7 +200,7 @@ More about drop down menu controller in [Drop Down Menu](dist/Drop Down Menu)
 
 ### More
 
-**You are missing something or have improvements?**
+**You are missing something or do you have improvements?**
 
 Please open a *pull-request* or an *Issue* and I will do my best ;-)
 
