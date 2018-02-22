@@ -21,7 +21,7 @@ const Photon = require("electron-photon");
 
 **Just look at the magic! Everything works out of the box.**
 
-Your `Photon` instance is just used to contain the component controllers and to perform special actions like `Dialog()` (More about [Dialogs](dist/Dialog)). Or if you want to *hack* a components lifecycle, there you get the classes you need.
+Your `Photon` instance is just used to contain the component controllers and to perform special actions like `Dialog()` (More about [Dialogs](dist/PhotonDialog)). Or if you want to *hack* a components lifecycle, there you get the classes you need.
 
 ## Example
 
@@ -190,7 +190,7 @@ More about sliders in [Progress Circle](dist/PhotonSlider)
 
 ![Dialog](https://dev.maurice-conrad.eu/img/photon/dialog1.png)
 
-More about dialog controller in [Dialog](dist/Dialog)
+More about dialog controller in [Dialog](dist/PhotonDialog)
 
 ### Drop Down Menu
 
