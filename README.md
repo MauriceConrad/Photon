@@ -89,7 +89,7 @@ More about the navigation list in
 
 ![Toolbars](https://dev.maurice-conrad.eu/img/photon/toolbar1.png)
 
-More about toolbars in [Toolbar](dist/Toolbar)
+More about toolbars in [Toolbar](dist/PhotonToolbar)
 
 
 ### Table View
@@ -135,7 +135,7 @@ More about all buttons in [Button](dist/PhotonButton)
 
 ![ButtonGroup Segmented](https://dev.maurice-conrad.eu/img/photon/buttongroupdesegmented.png)
 
-More about the button group component in [Button Group](dist/PhotonButtonGroup)
+More about the button group component in [Button Group](dist/PhotonBtnGroup)
 
 ### Circular Slider
 
