@@ -80,7 +80,7 @@
     },
     "DropDown": {
       path: "dist/PhotonMenu",
-      style: "dropdown.css"
+      //style: "dropdown.css"
     },
     "PhotonNavigation": {
       path: "dist/PhotonNavigation",
