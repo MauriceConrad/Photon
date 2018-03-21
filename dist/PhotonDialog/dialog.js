@@ -66,7 +66,7 @@ module.exports = async function Dialog(e, options = {}) {
     dialog.webContents.on("did-finish-load", function() {
       dialog.webContents.executeJavaScript('document.querySelector(".modal-window").innerHTML = `' + template.replace(/`/g, "\\`") + '`;\n');
       if (templateScript.getAttribute("data-js")) {
-        dialog.webContents.executeJavaScript('var script = document.createElement("script"); script.async = true; script.type = "text/javascript"; script.src = "' + jsScript + '"; document.head.append(script);');
+        dialog.webContents.executeJavaScript('var script = document.createElement("script"); script.async = true; script.type = "text/javascript"; script.src = "' + jsScript.replace(/\\/g, "/") + '"; document.head.append(script);');
       }
     });
 

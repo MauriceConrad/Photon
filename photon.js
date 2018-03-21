@@ -116,7 +116,7 @@
         // Get the stylesheet's full path
         let styleSheetPath = componentBaseDir + "/" + components[componentName].style;
         // Append an @import statement to the styleheet of photon that refers to the components stylesheet
-        photonStyle.append('@import "' + styleSheetPath + '";');
+        photonStyle.append('@import "' + styleSheetPath.replace(/\\/g, "/") + '";');
       }
     }
   }
