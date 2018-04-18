@@ -5,6 +5,11 @@ const path = require('path');
 
 const photonPath = path.normalize(__dirname + "/../../");
 
+function getBaseUrl(url) {
+	var re = new RegExp(/^.*\//);
+	return re.exec(url);
+}
+
 module.exports = async function Dialog(e, options = {}) {
   var templateScript = e;
   if (typeof e === "string") {
@@ -61,12 +66,12 @@ module.exports = async function Dialog(e, options = {}) {
 
     dialog.loadURL("file://" + __dirname + "/templateModal.html");
 
-    const jsScript = path.join(path.dirname(window.location.origin + window.location.pathname), templateScript.getAttribute("data-js") || "");
+    const jsScript = getBaseUrl(mainWindow.getURL()) + templateScript.getAttribute("data-js") || "";
 
     dialog.webContents.on("did-finish-load", function() {
       dialog.webContents.executeJavaScript('document.querySelector(".modal-window").innerHTML = `' + template.replace(/`/g, "\\`") + '`;\n');
       if (templateScript.getAttribute("data-js")) {
-        dialog.webContents.executeJavaScript('var script = document.createElement("script"); script.async = true; script.type = "text/javascript"; script.src = "' + jsScript.replace(/\\/g, "/") + '"; document.head.append(script);');
+        dialog.webContents.executeJavaScript('var script = document.createElement("script"); script.async = true; script.type = "text/javascript"; script.src = "' + jsScript + '"; document.head.append(script);');
       }
     });
 
