@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Photon</title>
+    <link rel="stylesheet" href="css/markdown.css">
+    <link rel="stylesheet" href="css/tomorrow-eighties.css">
+    <script src="js/main.js" charset="utf-8"></script>
+    <script src="js/highlight.min.js" charset="utf-8"></script>
+    <script src="js/marked.min.js" charset="utf-8"></script>
+    <style media="screen">
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Helvetica Neue", "Helvetica", sans-serif;
+      }
+      header {
+        padding: 0 0px 50px;
+        text-align: center;
+        background-image: url('images/Sierra 2.jpg');
+        background-size: cover;
+        color: #fff;
+      }
+      main {
+        text-align: center;
+        max-width: 1200px;
+        margin: auto;
+      }
+      .preview-frame {
+        width: 100%;
+        width: calc(100% - 20px);
+        height: 700px;
+        border: none;
+        box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, .5);
+        border-radius: 4px;
+        max-width: 1200px;
+        margin: 0 10px;
+      }
+      .btn-group {
+        margin: 0 0 0;
+        display: inline-block;
+      }
+      button {
+        vertical-align: middle;
+        font-size: 1em;
+        border: 1px solid #e93725;
+        background-color: #e93725;
+        padding: 3px 10px 0 5px;
+        color: #fff;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button .icon {
+        width: 40px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      button:hover {
+        background-color: #db3322;
+        border-color: #c12919;
+      }
+      .title {
+        padding: 50px 0 0;
+        text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
+
+      }
+      .title p {
+        font-size: 1.3em;
+      }
+      .title h1 {
+
+
+      }
+      h1 {
+        margin: 0;
+        font-weight: 200;
+        font-size: 4em;
+        letter-spacing: 2px;
+      }
+      nav {
+        font-size: 1.1em;
+        text-align: left;
+        display: flex;
+        width: 100%;
+        -webkit-backdrop-filter: blur(50px);
+        position: fixed;
+        background-color: rgba(255, 255, 255, 0.1);
+        background-color: rgba(0, 0, 0, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+
+      }
+      nav .logo {
+        display: inline-block;
+        flex: 1;
+      }
+      .navigation {
+        list-style: none;
+        margin: 0;
+        padding: 10px 0;
+        text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
+        font-weight: 300;
+        letter-spacing:  0.3px;
+      }
+      .navigation li {
+        display: inline-block;
+        padding: 0 10px;
+      }
+
+      h2 {
+        font-weight: 300;
+        letter-spacing: 1px;
+        font-size: 2.2em;
+      }
+
+      .markdown {
+
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+
+        </div>
+        <ul class="navigation">
+          <li>Getting Started</li>
+          <li>Documentation</li>
+          <li>Examples</li>
+        </ul>
+      </nav>
+      <div class="title">
+        <br><br>
+        <h1>Photon</h1>
+        <p>Develop native UI's using web technologies.</p>
+      </div>
+      <iframe src="../WebApp/index.html" class="preview-frame"></iframe>
+    </header>
+    <main>
+      <br>
+      <div class="btn-group">
+        <button>
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" width="100%" height="100%">
+              <g id="surface1">
+                <path style="fill: #fff" d="M 16 4 C 9.371094 4 4 9.371094 4 16 C 4 21.300781 7.4375 25.800781 12.207031 27.386719 C 12.808594 27.496094 13.027344 27.128906 13.027344 26.808594 C 13.027344 26.523438 13.015625 25.769531 13.011719 24.769531 C 9.671875 25.492188 8.96875 23.160156 8.96875 23.160156 C 8.421875 21.773438 7.636719 21.402344 7.636719 21.402344 C 6.546875 20.660156 7.71875 20.675781 7.71875 20.675781 C 8.921875 20.761719 9.554688 21.910156 9.554688 21.910156 C 10.625 23.746094 12.363281 23.214844 13.046875 22.910156 C 13.15625 22.132813 13.46875 21.605469 13.808594 21.304688 C 11.144531 21.003906 8.34375 19.972656 8.34375 15.375 C 8.34375 14.0625 8.8125 12.992188 9.578125 12.152344 C 9.457031 11.851563 9.042969 10.628906 9.695313 8.976563 C 9.695313 8.976563 10.703125 8.65625 12.996094 10.207031 C 13.953125 9.941406 14.980469 9.808594 16 9.804688 C 17.019531 9.808594 18.046875 9.941406 19.003906 10.207031 C 21.296875 8.65625 22.300781 8.976563 22.300781 8.976563 C 22.957031 10.628906 22.546875 11.851563 22.421875 12.152344 C 23.191406 12.992188 23.652344 14.0625 23.652344 15.375 C 23.652344 19.984375 20.847656 20.996094 18.175781 21.296875 C 18.605469 21.664063 18.988281 22.398438 18.988281 23.515625 C 18.988281 25.121094 18.976563 26.414063 18.976563 26.808594 C 18.976563 27.128906 19.191406 27.503906 19.800781 27.386719 C 24.566406 25.796875 28 21.300781 28 16 C 28 9.371094 22.628906 4 16 4 Z "></path>
+              </g>
+            </svg>
+          </div>
+          GitHub
+        </button>
+        <button>
+          <div class="icon">
+            <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 6 6" width"100%" height="100%">
+              <polygon xmlns="http://www.w3.org/2000/svg" fill="#fff" points="1,5 3,5 3,2 4,2 4,5 5,5 5,1 1,1 "/>
+            </svg>
+          </div>
+          NPM
+        </button>
+      </div>
+      <h2>Getting Started.</h2>
+      <div class="markdown" data-markdown="https://rawgit.com/MauriceConrad/Photon/master/README.md" data-markdown-start="## Install">
+        Hallo Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,5 +1,10 @@
 # Lists & Swipes
 
+![Swipe](https://dev.maurice-conrad.eu/img/photon/swipe1.png)
+![Swipe](https://dev.maurice-conrad.eu/img/photon/swipe2.png)
+
+![Swipes Showreel](https://dev.maurice-conrad.eu/img/photon/swipes.gif)
+
 The `<list-group>` element is theoretically independent but it is recommended to use it within a sidebar pane such as `<div class="pane-sm sidebar">` because this is the way how the UI is meant. More about *pane* and *pane group* you can read in the documentation.
 
 ## Layout
@@ -21,7 +26,7 @@ The context should look like the following.
       </list-item>
       ...
     </list-group>
-
+    
 
   </div>
   ...

@@ -1,4 +1,10 @@
-const electron = require('electron');
+try {
+  var electron = require('electron');
+
+}
+catch (err) {
+  window.addEventListener("load", () => document.body.classList.add("no-electron"));
+}
 
 
 class PhotonWindow extends HTMLElement {
@@ -29,8 +35,11 @@ class PhotonWindow extends HTMLElement {
 PhotonWindow.observedAttributes = ["data-vibrancy"];
 PhotonWindow.prototype.__attributeHandlers = {
   ["data-vibrancy"](oldValue, newValue) {
-    const browserWindow = electron.remote.getCurrentWindow();
-    browserWindow.setVibrancy(newValue);
+    try {
+      const browserWindow = require('electron').remote.getCurrentWindow();
+      browserWindow.setVibrancy(newValue);
+    }
+    catch (e) {}
   }
 };
 

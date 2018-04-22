@@ -1,0 +1,76 @@
+.markdown {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  color: #333;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  text-align: left;
+  padding: 0px 20px;
+  box-sizing: border-box;
+}
+.markdown h1, .markdown h2, .markdown h3 {
+  font-weight: 500;
+  margin: 20px 0px 15px 0px;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid #dedede;
+}
+.markdown table {
+  border: 1px solid #ababab;
+  border-collapse: collapse;
+}
+.markdown table tbody tr:nth-child(even) {
+  background-color: #f4f2f2;
+}
+.markdown table tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+.markdown table tr td, .markdown table tr th {
+  border: 1px solid #c3c3c3;
+  border-right-color: #dddddd;
+  padding: 10px 12px;
+}
+.markdown table tr td:last-child, .markdown table tr th:last-child {
+  border-right-color: #c3c3c3;
+}
+.markdown table thead tr th {
+  font-weight: 500;
+}
+
+.markdown p {
+  white-space: normal;
+  overflow: hidden;
+}
+
+.markdown pre {
+  border-radius: 3px;
+  display: inline;
+  margin: 10px;
+}
+.markdown code {
+  font-size: 1em;
+  font-weight: 200;
+}
+.markdown pre code {
+  border-radius: 5px;
+  padding: 15px;
+}
+.markdown *:not(pre) > code {
+  background-color: #f4f4f4;
+}
+
+
+.markdown img {
+  max-width: 100% !important;
+}
+
+
+
+.markdown ul li {
+  text-align: left !important;
+}
+.markdown ul li a {
+
+}
+a {
+  color: inherit;
+  color: #0078da;
+}

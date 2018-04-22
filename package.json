@@ -1,8 +1,9 @@
 {
 	"name": "electron-photon",
-	"version": "0.1.0",
+	"version": "1.1.0",
 	"description": "Photon UI for macOS, windows & linux",
 	"keywords": [
+		"photon",
 		"ui",
 		"native",
 		"mac",

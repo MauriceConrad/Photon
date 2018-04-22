@@ -52,7 +52,7 @@ To set a *pane*'s minimal width, just use the CSS property `min-width`.
 </div>
 ```
 
-### Min Width
+### Max Width
 
 To set a *pane*'s maximal width, just use the CSS property `max-width`.
 

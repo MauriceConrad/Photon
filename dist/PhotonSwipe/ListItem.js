@@ -1,14 +1,19 @@
 const { hasParentSelector, getTransDur, parseCSSProperty } = require('./../../helper');
 
-var electron = require('electron');
-var mainWindow = electron.remote.getCurrentWindow();
+try {
+  var electron = require('electron');
+  var mainWindow = electron.remote.getCurrentWindow();
 
-mainWindow.on("scroll-touch-begin", function(event) {
-  PhotonListItem.__gestureTouch = true;
-});
-mainWindow.on("scroll-touch-end", function(event) {
-  PhotonListItem.__gestureTouch = false;
-});
+  mainWindow.on("scroll-touch-begin", function(event) {
+    PhotonListItem.__gestureTouch = true;
+  });
+  mainWindow.on("scroll-touch-end", function(event) {
+    PhotonListItem.__gestureTouch = false;
+  });
+}
+catch (e) {
+
+}
 
 class PhotonListItem extends HTMLElement {
   constructor() {
@@ -79,11 +84,16 @@ class PhotonListItem extends HTMLElement {
       speed: 0
     };
 
-    mainWindow.on("scroll-touch-end", (event) => {
-      if (this.gesture.direction && this.gesture.touch) {
-        this.__touchEndHandler(event);
-      }
-    });
+    try {
+      mainWindow.on("scroll-touch-end", (event) => {
+        if (this.gesture.direction && this.gesture.touch) {
+          this.__touchEndHandler(event);
+        }
+      });
+    }
+    catch (e) {
+
+    }
   }
   /*get actionLists() {
     const actionLists = Array.from(this.getElementsByTagName("action-list"));

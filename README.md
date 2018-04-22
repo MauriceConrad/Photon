@@ -69,7 +69,41 @@ The main layout of your application needs a `<ph-window>` element in which the `
 
 If you have a look at the project's structure, you will see that there exist a very well balanced component system you theoretically can contribute to with custom components.
 
-### Window
+### Styles
+
+How do I set the **style** of the UI?
+`Photon` supports multiple styles, inspired by native user interfaces from *macOS* or *Windows*.
+
+By default, `Photon` tries to use the `style` that is connected to the running OS, stored in `process.platform`. But you can easily set the style to one of the supported ones. Note that the styles do not have the name of an operating system but their **real** name such as *cocoa*.
+
+|Style Name|Related Operating System|     Support
+|----------|------------------------|------------
+|  `cocoa` |     macOS (Apple)      |        True
+|  `metro` |  Windows (Microsoft)   |Cooming soon
+|  `unity` |     Ubuntu (Linux)     |Cooming soon
+
+#### Set Style
+
+You can easily control the current style just with the `style` property of your `Photon` instance.
+
+```javascript
+// Set style
+Photon.style = "cocoa";
+// Works as expected
+```
+
+You can do this whenever you want while your application is running ;-)
+
+Note, that when you set a style the first time in your session, it may takes time to load the resources because they are not cached.
+
+#### Set An Invalid Style
+
+```javascript
+// Set style
+Photon.style = "xxx";
+// Occurs an error
+```
+
 
 ### Panes
 
@@ -89,7 +123,7 @@ More about the navigation list in
 
 ![Toolbars](https://dev.maurice-conrad.eu/img/photon/toolbar1.png)
 
-More about toolbars in [Toolbar](dist/Toolbar)
+More about toolbars in [Toolbar](dist/PhotonToolbar)
 
 
 ### Table View
@@ -135,7 +169,7 @@ More about all buttons in [Button](dist/PhotonButton)
 
 ![ButtonGroup Segmented](https://dev.maurice-conrad.eu/img/photon/buttongroupdesegmented.png)
 
-More about the button group component in [Button Group](dist/PhotonButtonGroup)
+More about the button group component in [Button Group](dist/PhotonBtnGroup)
 
 ### Circular Slider
 
@@ -197,6 +231,7 @@ More about dialog controller in [Dialog](dist/PhotonDialog)
 ![Dialog](https://dev.maurice-conrad.eu/img/photon/dropdown1.png)
 
 More about drop down menu controller in [Drop Down Menu](dist/Drop Down Menu)
+
 
 ### More
 
