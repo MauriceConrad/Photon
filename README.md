@@ -1,5 +1,7 @@
 # Photon
 
+[Offical Website](https://mauriceconrad.github.io/Photon/)
+
 Develop native looking UI's for **Electron** with HTML, CSS & JS.
 
 ![ShowReel](https://dev.maurice-conrad.eu/img/photon/demo.png)
@@ -218,7 +220,7 @@ More about progress circle in [Progress Circle](dist/PhotonProgressCircle)
 
 ![Slider](https://camo.githubusercontent.com/d4635dbfc74c802b7b6dac1edb65d68c1490850b/68747470733a2f2f7069636c6f61642e6f72672f696d6167652f726469706f7077612f62696c6473636869726d666f746f323031362d31312d3036756d32312e312e706e67)
 
-More about sliders in [Progress Circle](dist/PhotonSlider)
+More about sliders in [Slider](dist/PhotonSlider)
 
 ### Dialog
 
@@ -232,6 +234,13 @@ More about dialog controller in [Dialog](dist/PhotonDialog)
 
 More about drop down menu controller in [Drop Down Menu](dist/Drop Down Menu)
 
+### Browserify
+
+You can `browserify` the `photon.js` file completely using the `--ignore-missing` flag which ignores the missing `electron` requirements. Please note, that not all features are supported in browsers because they may need electron or node functions.
+
+If you browserify `photon.js` and execute it in a non-node enviroment, the `Photon` instance will adopted globally to the *window* object.
+
+This repository contains a valid browserified file named `photon-browser.js`, you normally should use.
 
 ### More
 
