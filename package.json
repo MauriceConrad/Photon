@@ -1,6 +1,6 @@
 {
 	"name": "electron-photon",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"description": "Photon UI for macOS, windows & linux",
 	"keywords": [
 		"photon",
@@ -10,6 +10,7 @@
 		"windows",
 		"linux"
 	],
+	"readme": "README.md",
 	"license": "ISC",
 	"author": "Maurice Conrad",
 	"main": "photon.js",
