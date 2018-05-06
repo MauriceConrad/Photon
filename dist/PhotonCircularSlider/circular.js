@@ -32,7 +32,7 @@ class CircularSlider extends HTMLElement {
   }
   __handleMouseMove(event) {
     if (this.__mousedown) {
-      this.__angle = this.__getAngle();
+      this.__angle = this.__getAngle(event);
       this.value = this.__angle;
 
       this.dispatchEvent(new Event('input', {
@@ -56,7 +56,7 @@ class CircularSlider extends HTMLElement {
   get dot() {
     return this.getElementsByClassName("dot")[0];
   }
-  __getAngle() {
+  __getAngle(event) {
     const boundings = this.getBoundingClientRect();
     const center = {
       x: boundings.left + boundings.width / 2,

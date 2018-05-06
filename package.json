@@ -1,6 +1,6 @@
 {
 	"name": "electron-photon",
-	"version": "1.1.1",
+	"version": "1.1.2",
 	"description": "Photon UI for macOS, windows & linux",
 	"keywords": [
 		"photon",
@@ -10,7 +10,6 @@
 		"windows",
 		"linux"
 	],
-	"readme": "README.md",
 	"license": "ISC",
 	"author": "Maurice Conrad",
 	"main": "photon.js",
@@ -21,5 +20,6 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
-	"dependencies": {}
+	"dependencies": {},
+	"readme": "README.md"
 }
