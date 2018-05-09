@@ -10,9 +10,20 @@
       const styleHandlers = {
         auto() {
           // Fill style with platform related style name automatically
-          Photon.style = {
-            MacIntel: "cocoa"
-          }[window.navigator.platform];
+          const platformStyles = {
+            MacIntels: "cocoa"
+          };
+          // If a platform specific style entry exists
+          if (window.navigator.platform in platformStyles) {
+            Photon.style = platformStyles[window.navigator.platform];
+          }
+          // No platform specific style entry
+          else {
+            // Get the alternativeStyle by the first entry of the platform entries
+            const alternativeStyle = platformStyles[Object.keys(platformStyles)[0]];;
+            console.warn("Your OS's default style is not supported. Using the default style '" + alternativeStyle  + "'");
+            Photon.style = alternativeStyle;
+          }
         },
         cocoa() {
           Photon.__setStyle("cocoa");
