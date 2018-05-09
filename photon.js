@@ -11,7 +11,7 @@
         auto() {
           // Fill style with platform related style name automatically
           const platformStyles = {
-            MacIntels: "cocoa"
+            MacIntel: "cocoa"
           };
           // If a platform specific style entry exists
           if (window.navigator.platform in platformStyles) {
