@@ -133,7 +133,7 @@ class CircularSlider extends HTMLElement {
   }
   __handleMouseMove(event) {
     if (this.__mousedown) {
-      this.__angle = this.__getAngle();
+      this.__angle = this.__getAngle(event);
       this.value = this.__angle;
 
       this.dispatchEvent(new Event('input', {
@@ -157,7 +157,7 @@ class CircularSlider extends HTMLElement {
   get dot() {
     return this.getElementsByClassName("dot")[0];
   }
-  __getAngle() {
+  __getAngle(event) {
     const boundings = this.getBoundingClientRect();
     const center = {
       x: boundings.left + boundings.width / 2,
@@ -2347,9 +2347,20 @@ Object.prototype.fillDefaults = function(defaults) {
       const styleHandlers = {
         auto() {
           // Fill style with platform related style name automatically
-          Photon.style = {
+          const platformStyles = {
             MacIntel: "cocoa"
-          }[window.navigator.platform];
+          };
+          // If a platform specific style entry exists
+          if (window.navigator.platform in platformStyles) {
+            Photon.style = platformStyles[window.navigator.platform];
+          }
+          // No platform specific style entry
+          else {
+            // Get the alternativeStyle by the first entry of the platform entries
+            const alternativeStyle = platformStyles[Object.keys(platformStyles)[0]];;
+            console.warn("Your OS's default style is not supported. Using the default style '" + alternativeStyle  + "'");
+            Photon.style = alternativeStyle;
+          }
         },
         cocoa() {
           Photon.__setStyle("cocoa");
