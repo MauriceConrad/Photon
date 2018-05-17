@@ -21,6 +21,23 @@ npm install electron-photon
 const Photon = require("electron-photon");
 ```
 
+### Use in Browser
+
+If you want to use Photon in a Browser, you have to mention some things.
+First of all, embed the browserified script file like anything else using a `<script>` Tag.
+But now, you also have to set a relative path for loading the components.
+```javascript
+<script src="photon.browser.js"></script>
+<script>
+  Photon.__baseDir = "/myPhotonMaster";
+</script>
+```
+
+#### Why?
+
+This is because Photon needs an “endpoint” that contains a “/dist” folder to load each component.
+The problem is, that we are embedding the `photon.browser.js` using a former script tag. And sadly, there exist no API to get the relative source of an embedded script from himself. Of course there exist a lot of hackt workarounds but currently this is the only “clean” solution.
+
 **Just look at the magic! Everything works out of the box.**
 
 Your `Photon` instance is just used to contain the component controllers and to perform special actions like `Dialog()` (More about [Dialogs](dist/PhotonDialog)). Or if you want to *hack* a components lifecycle, there you get the classes you need.
