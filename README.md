@@ -26,7 +26,7 @@ const Photon = require("electron-photon");
 If you want to use Photon in a Browser, you have to mention some things.
 First of all, embed the browserified script file like anything else using a `<script>` Tag.
 But now, you also have to set a relative path for loading the components.
-```javascript
+```html
 <script src="photon.browser.js"></script>
 <script>
   Photon.__baseDir = "/myPhotonMaster";
