@@ -2398,6 +2398,13 @@ Object.prototype.fillDefaults = function(defaults) {
         }
       }
 
+    },
+    set __baseDir(dir) {
+      Photon.__baseDirectory = dir;
+      Photon.style = "auto";
+    },
+    get __baseDir() {
+      return Photon.__baseDirectory;
     }
   };
 
@@ -2486,17 +2493,19 @@ Object.prototype.fillDefaults = function(defaults) {
 
   // Set auto synchronously if whe are running in node (then we can get the '__dirname' but if not, we have to use '__baseDir' which has to be set manually)
   // This means, we can not do this action synchronously but asynchrounusly
-  if (!process.browser) {
+  if (!process.browser && false) {
     Photon.style = "auto";
   }
   // Do it asynchrounusly and check wether a '__baseDir' was set
-  else {
+  else if (false) {
     setTimeout(function() {
       if (Photon.__baseDir) {
         Photon.style = "auto";
       }
     }, 0);
   }
+
+  Photon.__baseDir = __dirname + "/";
 
 
   if (window) {

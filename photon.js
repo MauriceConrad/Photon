@@ -1,5 +1,6 @@
 (function() {
   const fs = require('fs');
+  const path = require('path');
 
   const componentsBasePath = "./components";
 
@@ -46,21 +47,30 @@
       }
 
       for (let key in Photon) {
-        const property = Photon[key];
-        // If the property contains a valid component
-        if (property && property[componentSymbol]) {
-          // Get the compontents full path
-          let componentBaseDir = (this.__baseDir || __dirname + "/") + components[key];
-          // Get the stylesheet's full path
-          let styleSheetPath = componentBaseDir + "/styles/" + styleName + ".css";
-          // Make posix path working on non-unix systems
-          styleSheetPath = styleSheetPath.replace(/\\/g, "/");
+        if (Photon.hasOwnProperty(key)) {
+          const property = Photon[key];
+          // If the property contains a valid component
+          if (property && property[componentSymbol]) {
+            // Get the compontents full path
+            let componentBaseDir = path.join(this.__baseDir, components[key]);
+            // Get the stylesheet's full path
+            let styleSheetPath = componentBaseDir + "/styles/" + styleName + ".css";
+            // Make posix path working on non-unix systems
+            styleSheetPath = styleSheetPath.replace(/\\/g, "/");
 
-          // Append an @import statement to the styleheet of photon that refers to the components stylesheet
-          photonStyle.append('@import "' + styleSheetPath.replace(/\\/g, "/") + '";');
+            // Append an @import statement to the styleheet of photon that refers to the components stylesheet
+            photonStyle.append('@import "' + styleSheetPath.replace(/\\/g, "/") + '";');
+          }
         }
       }
 
+    },
+    set __baseDir(dir) {
+      Photon.__baseDirectory = dir;
+      Photon.style = "auto";
+    },
+    get __baseDir() {
+      return Photon.__baseDirectory;
     }
   };
 
@@ -147,19 +157,7 @@
     }
   }
 
-  // Set auto synchronously if whe are running in node (then we can get the '__dirname' but if not, we have to use '__baseDir' which has to be set manually)
-  // This means, we can not do this action synchronously but asynchrounusly
-  if (!process.browser && false) {
-    Photon.style = "auto";
-  }
-  // Do it asynchrounusly and check wether a '__baseDir' was set
-  else {
-    setTimeout(function() {
-      if (Photon.__baseDir) {
-        Photon.style = "auto";
-      }
-    }, 0);
-  }
+  Photon.__baseDir = __dirname;
 
 
   if (window) {
