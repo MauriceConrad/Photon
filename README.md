@@ -42,6 +42,13 @@ The problem is, that we are embedding the `photon.browser.js` using a former scr
 
 Your `Photon` instance is just used to contain the component controllers and to perform special actions like `Dialog()` (More about [Dialogs](dist/PhotonDialog)). Or if you want to *hack* a components lifecycle, there you get the classes you need.
 
+### Troubleshooting
+
+**I get an error** `ERR_FILE_NOT_FOUND` when *requiring* the  **Photon**. Sometimes the components will not load and you may ask yourself why.
+Generally, `Photon` loads each component on its own. Therefore, a general `/dist` folder is required that contains all component folders. By default, the module tries to use the `/dist` folder relative to the location of `photon.js` using node's `__dirname`. Because of the fact that browsers does not support a clear solution to get the relative path of embeded javascript file by itself, you have to set `Photon.__baseDir` manually when using the browserified version. And if you do not contain your `/dist` directory relative to the location of `photon.js` (which is the `main` file for the node module), you also have to set `Phoron.__baseDir` manually.
+
+Therefore, if you get such an error, just try to set the `Photon.__baseDir` manually to the `/dist` folder you want to use to load your components
+
 ## Example
 
 Just run the `demo/ShowReel` folder with `electron` and will see the whole beauty of Photon!
