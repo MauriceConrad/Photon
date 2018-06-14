@@ -84,15 +84,18 @@ Object.defineProperty(Array.prototype, "last", {
     return this.lastFrom(0);
   }
 });
-Object.prototype.keyFromValue = function(value) {
-  for (var key in this) {
-    if (this.hasOwnProperty(key)) {
-      if (this[key] === value) {
-        return key;
+Object.defineProperty(Object.prototype, 'keyFromValue', {
+  enumerable: false,
+  value: function (value) {
+    for (var key in this) {
+      if (this.hasOwnProperty(key)) {
+        if (this[key] === value) {
+          return key;
+        }
       }
     }
   }
-};
+});
 Array.prototype.indexOfKey = function(value, key, start = 0) {
   for (var i = start; i < this.length; i++) {
     if (this[i][key] === value) {
@@ -109,6 +112,9 @@ Math.roundDeep = function(number, deepness = 0) {
   const multi = Math.pow(10, deepness);
   return Math.round(number * multi) / multi;
 };
-Object.prototype.fillDefaults = function(defaults) {
-  return module.exports.objFillDefaults(this, defaults);
-};
+Object.defineProperty(Object.prototype, 'fillDefaults', {
+  enumerable: false,
+  value: function (defaults) {
+    return module.exports.objFillDefaults(this, defaults);
+  }
+});
