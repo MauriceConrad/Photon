@@ -5,3 +5,5 @@ const Navigation = {
 
 customElements.define("nav-group", Navigation.NavigationGroup);
 customElements.define("nav-item", Navigation.NavigationItem);
+
+module.exports = Navigation;
