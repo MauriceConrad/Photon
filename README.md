@@ -35,8 +35,8 @@ But now, you also have to set a relative path for loading the components.
 
 #### Why?
 
-This is because Photon needs an “endpoint” that contains a “/dist” folder to load each component.
-The problem is, that we are embedding the `photon.browser.js` using a former script tag. And sadly, there exist no API to get the relative source of an embedded script from himself. Of course there exist a lot of hackt workarounds but currently this is the only “clean” solution.
+This is because Photon needs an “endpoint” that contains a `/dist` folder to load each component.
+The problem is, that we are embedding the `photon.browser.js` using a former script tag. And sadly, there exist no API to get the relative source of an embedded script from himself. Of course there exist a lot of hacks workarounds but currently this is the only “clean” solution.
 
 **Just look at the magic! Everything works out of the box.**
 
@@ -45,7 +45,7 @@ Your `Photon` instance is just used to contain the component controllers and to 
 ### Troubleshooting
 
 **I get an error** `ERR_FILE_NOT_FOUND` when *requiring* the  **Photon**. Sometimes the components will not load and you may ask yourself why.
-Generally, `Photon` loads each component on its own. Therefore, a general `/dist` folder is required that contains all component folders. By default, the module tries to use the `/dist` folder relative to the location of `photon.js` using node's `__dirname`. Because of the fact that browsers does not support a clear solution to get the relative path of embeded javascript file by itself, you have to set `Photon.__baseDir` manually when using the browserified version. And if you do not contain your `/dist` directory relative to the location of `photon.js` (which is the `main` file for the node module), you also have to set `Phoron.__baseDir` manually.
+Generally, `Photon` loads each component on its own. Therefore, a general `/dist` folder is required that contains all component folders. By default, the module tries to use the `/dist` folder relative to the location of `photon.js` using node's `__dirname`. Because of the fact that browsers does not support a clear solution to get the relative path of embedded javascript file by itself, you have to set `Photon.__baseDir` manually when using the browserified version. And if you do not contain your `/dist` directory relative to the location of `photon.js` (which is the `main` file for the node module), you also have to set `Photon.__baseDir` manually.
 
 Therefore, if you get such an error, just try to set the `Photon.__baseDir` manually to the `/dist` folder you want to use to load your components
 
@@ -105,8 +105,8 @@ By default, `Photon` tries to use the `style` that is connected to the running O
 |Style Name|Related Operating System|     Support
 |----------|------------------------|------------
 |  `cocoa` |     macOS (Apple)      |        True
-|  `metro` |  Windows (Microsoft)   |Cooming soon
-|  `unity` |     Ubuntu (Linux)     |Cooming soon
+|  `metro` |  Windows (Microsoft)   |Coming soon
+|  `unity` |     Ubuntu (Linux)     |Coming soon
 
 #### Set Style
 
