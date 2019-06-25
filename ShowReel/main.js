@@ -6,7 +6,8 @@ electron.app.on("ready", function() {
     height: 720,
     titleBarStyle: "hidden",
     webPreferences: {
-      experimentalFeatures: true
+      experimentalFeatures: true,
+      nodeIntegration: true
     }
   });
   window.loadURL("file://" + __dirname + "/index.html");
