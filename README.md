@@ -1,6 +1,6 @@
 # Photon
 
-[Offical Website](https://mauriceconrad.github.io/Photon/)
+[Official Website](https://mauriceconrad.github.io/Photon/)
 
 Develop native looking UI's for **Electron** with HTML, CSS & JS.
 
