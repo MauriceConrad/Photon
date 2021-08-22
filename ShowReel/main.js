@@ -7,7 +7,8 @@ electron.app.on("ready", function() {
     titleBarStyle: "hidden",
     webPreferences: {
       experimentalFeatures: true,
-      nodeIntegration: true
+      nodeIntegration: true,
+      enableRemoteModule: true
     }
   });
   window.loadURL("file://" + __dirname + "/index.html");
