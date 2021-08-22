@@ -62,13 +62,17 @@ else {
         });
       });
 
-      mainWindow.on("resize", function(event) {
-        dialog.setSheetOffset(sheetOffset);
+      const resizeCallback = function (event) {
+        dialog.setSheetOffset(sheetOffset)
         setModalPos(dialog, mainWindow, {
           x: 0,
           y: sheetOffset
-        });
-      });
+        })
+      }
+      dialog.on('close', function () {
+        mainWindow.off("resize", resizeCallback)
+      })
+      mainWindow.on("resize", resizeCallback)
 
       dialog.loadURL("file://" + __dirname + "/templateModal.html");
 
