@@ -48,7 +48,12 @@ else {
         //alwaysOnTop: true,
         vibrancy: "popover",
         modal: true,
-        //'use-content-size': true
+        //'use-content-size': true,
+        webPreferences: {
+          experimentalFeatures: true,
+          nodeIntegration: true,
+          enableRemoteModule: true
+        }
       }, options));
 
       const sheetOffset = photonWin.content.getBoundingClientRect().top;
